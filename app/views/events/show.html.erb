@@ -1,0 +1,43 @@
+<p>
+  <strong>Organization:</strong>
+  <%= @event.organization %>
+</p>
+
+<p>
+  <strong>Event name:</strong>
+  <%= @event.event_name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @event.time %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @event.street_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @event.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @event.state %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @event.zip_code %>
+</p>
+<% if current_organization && @event.organization == current_organization %>
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+<% end %>
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FastHelp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div id="organization_header">
+      <%= link_to "Home", root_path %>
+      <%= link_to "Events", events_path %>
+      <% if current_organization %>
+        <%= current_organization.org_name %>
+        <%= link_to "Log Out", logout_path %>
+      <% else %>
+        <%= link_to "Org Sign Up", signup_path %>
+        <%= link_to "Org Log In", login_path%>
+      <% end %>
+    </div>
+
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, class: "alert alert-#{key}") do %>
+        <p><%= value %></p>
+      <% end %>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

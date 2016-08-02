@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  organization: one
+  event_name: MyString
+  date: 2016-08-02
+  time: 2016-08-02 18:46:46
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip_code: MyString
+
+two:
+  organization: two
+  event_name: MyString
+  date: 2016-08-02
+  time: 2016-08-02 18:46:46
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip_code: MyString

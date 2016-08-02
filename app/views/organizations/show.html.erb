@@ -1,0 +1,47 @@
+<p>
+  <strong>Org name:</strong>
+  <%= @organization.org_name %>
+</p>
+
+<p>
+  <strong>Org type:</strong>
+  <%= @organization.org_type %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @organization.contact_name %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @organization.contact_number %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @organization.street_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @organization.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @organization.state %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @organization.zip_code %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @organization.email %>
+</p>
+
+<%= link_to 'Edit', edit_organization_path(@organization) %> |
+<%= link_to 'Back', organizations_path %>
