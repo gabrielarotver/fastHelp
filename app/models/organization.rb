@@ -1,5 +1,7 @@
 class Organization < ApplicationRecord
   has_secure_password
+  geocoded_by :address
+  after_validation :geocode
   has_many :events, dependent: :destroy
 
   validates :org_name, presence: true
@@ -14,5 +16,9 @@ class Organization < ApplicationRecord
 
   def to_s
     "#{org_name}"
+  end
+
+  def address
+    [street_address, city, state, zip_code].compact.join(', ')
   end
 end
