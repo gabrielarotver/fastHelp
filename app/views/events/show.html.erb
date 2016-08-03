@@ -37,6 +37,17 @@
   <strong>Zip code:</strong>
   <%= @event.zip_code %>
 </p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @event.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @event.longitude %>
+</p>
+
 <% if current_organization && @event.organization == current_organization %>
   <%= link_to 'Edit', edit_event_path(@event) %> |
 <% end %>

@@ -1,7 +1,7 @@
 class Organization < ApplicationRecord
   has_secure_password
   geocoded_by :address
-  after_validation :geocode
+  after_validation :geocode, :if => :address_changed?
   has_many :events, dependent: :destroy
 
   validates :org_name, presence: true

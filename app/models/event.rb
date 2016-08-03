@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :organization
-
+  geocoded_by :address
+  after_validation :geocode, :if => :address_changed?
   validates :organization, presence: true
 
   validates :date, presence: true
@@ -14,4 +15,13 @@ class Event < ApplicationRecord
   def to_s
     event_name
   end
+
+  def address
+    [street_address, city, state, zip_code].compact.join(', ')
+  end
+
+  def address_changed?
+    street_address_changed? || city_changed? || state_changed? || zip_code_changed?
+  end
+  
 end
