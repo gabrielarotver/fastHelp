@@ -48,6 +48,19 @@
   <%= @event.longitude %>
 </p>
 
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@event.latitude}%2C#{@event.longitude}" %>
+
+
+<h3>Nearby Events</h3>
+<ul>
+  <% if !@event.nearbys(30).nil? %>
+    <% for event in @event.nearbys(30) %>
+      <li><%= link_to event.address, event %> (<%= event.distance.round(2) %>) miles </li>
+    <% end %>
+  <% end %>
+</ul>
+
 <% if current_organization && @event.organization == current_organization %>
   <%= link_to 'Edit', edit_event_path(@event) %> |
 <% end %>

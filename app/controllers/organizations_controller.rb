@@ -4,7 +4,12 @@ class OrganizationsController < ApplicationController
   # GET /organizations
   # GET /organizations.json
   def index
-    @organizations = Organization.all
+    if params[:search].present?
+      # search radius and order by distance
+      @organizations = Organization.near(params[:search], 50, :order => 'distance')
+    else
+      @organizations = Organization.all
+    end
   end
 
   # GET /organizations/1

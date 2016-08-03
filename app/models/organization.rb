@@ -21,4 +21,9 @@ class Organization < ApplicationRecord
   def address
     [street_address, city, state, zip_code].compact.join(', ')
   end
+
+  def address_changed?
+    street_address_changed? || city_changed? || state_changed? || zip_code_changed?
+  end
+
 end

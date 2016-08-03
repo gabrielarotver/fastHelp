@@ -53,5 +53,16 @@
   <%= @organization.longitude %>
 </p>
 
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@organization.latitude}%2C#{@organization.longitude}" %>
+
+<h3>Nearby Organizations</h3>
+<ul>
+  <% if !@organization.nearbys(30).nil? %>
+    <% for org in @organization.nearbys(30) %>
+      <li><%= link_to org.address, org %> (<%= org.distance.round(2) %>) miles </li>
+    <% end %>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
