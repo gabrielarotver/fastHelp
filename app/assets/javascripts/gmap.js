@@ -7,7 +7,6 @@ $(document).on('turbolinks:load', function(){
     $('#geocoding').addClass('active');
     $.ajax("/events.json").done(function(event){
       var events = event;
-      console.log(events[1].latitude);
       $.ajax("/organizations.json").done(function(orgs){
         var organizations = orgs;
         console.log(organizations);
