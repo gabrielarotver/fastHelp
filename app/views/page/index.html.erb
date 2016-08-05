@@ -1,6 +1,11 @@
 <h1>Page#index</h1>
 <p>Find me in app/views/page/index.html.erb</p>
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
+<div id="map-container">
+  <div id="map-canvas"></div>
+
+  <div id="geocoding_fields">
+    <%= text_field_tag :search, params[:search], placeholder: "Enter a place", :id => 'search_box_geocoding', class: 'search_box' %>
+    <%= button_tag "Search", id: "submit_button_geocoding", data: { disable_with: "Please wait..." }, class: "submit_button" %>
+  </div>
 </div>
