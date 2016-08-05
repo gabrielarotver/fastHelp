@@ -1,8 +1,8 @@
 var handler;
+
 $(document).on('turbolinks:load', function(){
 
   if(window.location.pathname === "/" || window.location.pathname.match("/events/") || window.location.pathname.match("/organizations/")) {
-    console.log("HELLO");
     $('#geocoding_fields').show();
     $('#geocoding').addClass('active');
     $.ajax("/events.json").done(function(event){
@@ -40,6 +40,7 @@ $(document).on('turbolinks:load', function(){
 
         handler.buildMap(mapOptions, function(){
           handler.map.centerOn({lat: centerOnMarker.latitude, lng: centerOnMarker.longitude});
+
           for(var i = 0; i < events.length; i++) {
             markers = handler.addMarkers([
               {
@@ -58,7 +59,7 @@ $(document).on('turbolinks:load', function(){
                 "infowindow": 'Org: <a href="/organizations/'+ organizations[i].id + '">' + organizations[i].org_name + '</a>' + "<br>" + organizations[i].street_address
               }
             ]);
-        }
+          }
 
         });
           $("#submit_button_geocoding").click(function(){
