@@ -5,6 +5,7 @@ $(document).on('turbolinks:load', function(){
   if(window.location.pathname === "/" || window.location.pathname.match("/events/") || window.location.pathname.match("/organizations/")) {
     $('#geocoding_fields').show();
     $('#geocoding').addClass('active');
+    // test
     $.ajax("/events.json").done(function(event){
       var events = event;
       $.ajax("/organizations.json").done(function(orgs){
