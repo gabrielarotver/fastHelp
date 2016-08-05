@@ -53,7 +53,9 @@
   <%= @organization.longitude %>
 </p>
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@organization.latitude}%2C#{@organization.longitude}" %>
+<div id="map-container">
+  <div id="map-canvas"></div>
+</div>
 
 <h3>Nearby Organizations</h3>
 <ul>

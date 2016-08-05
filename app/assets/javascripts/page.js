@@ -1,8 +1,8 @@
 var handler;
 $(document).on('turbolinks:load', function(){
 
-
-  if(window.location.pathname === "/") {
+  if(window.location.pathname === "/" || window.location.pathname.match("/events/") || window.location.pathname.match("/organizations/")) {
+    console.log("HELLO");
     $('#geocoding_fields').show();
     $('#geocoding').addClass('active');
     $.ajax("/events.json").done(function(event){
@@ -14,10 +14,21 @@ $(document).on('turbolinks:load', function(){
 
         // work with googlemaps APIs
         handler = Gmaps.build('Google');
+        var centerOnMarker = organizations[0];
+        var url = window.location.pathname;
+        var zoomInValue, id;
+
+        if(url === "/") {
+          zoomInValue = 10;
+        } else {
+          zoomInValue = 20;
+          id = parseInt(url.substring(url.lastIndexOf('/') + 1)) - 1;
+          centerOnMarker = url.match("/events/") ? events[id-1] : events[id-1];
+        }
 
         var mapOptions = {
           provider:{
-            zoom: 10,
+            zoom: zoomInValue,
             mapTypeId: google.maps.MapTypeId.NORMAL,
             panControl: true,
             scaleControl: false,
@@ -28,7 +39,7 @@ $(document).on('turbolinks:load', function(){
         };
 
         handler.buildMap(mapOptions, function(){
-          handler.map.centerOn({lat: organizations[0].latitude, lng: organizations[0].longitude});
+          handler.map.centerOn({lat: centerOnMarker.latitude, lng: centerOnMarker.longitude});
           for(var i = 0; i < events.length; i++) {
             markers = handler.addMarkers([
               {
