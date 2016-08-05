@@ -34,7 +34,7 @@ $(document).on('turbolinks:load', function(){
               {
                 "lat": events[i].latitude,
                 "lng": events[i].longitude,
-                "infowindow": "Event: " +events[i].event_name + "<br>" + events[i].street_address
+                "infowindow": 'Event: <a href="/events/'+ event[i].id + '">' + events[i].event_name + '</a>' + "<br>" + events[i].street_address
               }
             ]);
           }
@@ -44,7 +44,7 @@ $(document).on('turbolinks:load', function(){
               {
                 "lat": organizations[i].latitude,
                 "lng": organizations[i].longitude,
-                "infowindow": "Org: " + organizations[i].org_name + "<br>" + organizations[i].street_address
+                "infowindow": 'Org: <a href="/organizations/'+ organizations[i].id + '">' + organizations[i].org_name + '</a>' + "<br>" + organizations[i].street_address
               }
             ]);
         }
