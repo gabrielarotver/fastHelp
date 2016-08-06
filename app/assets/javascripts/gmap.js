@@ -1,11 +1,10 @@
 var handler;
+var crd;
 
 $(document).on('turbolinks:load', function(){
 
   if(window.location.pathname === "/" || window.location.pathname.match("/events/") || window.location.pathname.match("/organizations/")) {
-    $('#geocoding_fields').show();
-    $('#geocoding').addClass('active');
-    // test
+
     $.ajax("/events.json").done(function(event){
       var events = event;
       $.ajax("/organizations.json").done(function(orgs){
@@ -14,15 +13,20 @@ $(document).on('turbolinks:load', function(){
         // work with googlemaps APIs
         handler = Gmaps.build('Google');
         var centerOnMarker = organizations[0];
+
         var url = window.location.pathname;
         var zoomInValue, id;
 
         if(url === "/") {
           zoomInValue = 10;
+          // show search field on main map
+          $('#geocoding_fields').show();
+          $('#geocoding').addClass('active');
         } else {
+          getLocation();
           zoomInValue = 20;
           id = parseInt(url.substring(url.lastIndexOf('/') + 1)) - 1;
-          centerOnMarker = url.match("/events/") ? events[id-1] : events[id-1];
+          centerOnMarker = url.match("/events/") ? events[id] : organizations[id];
         }
 
         var mapOptions = {
@@ -43,6 +47,11 @@ $(document).on('turbolinks:load', function(){
           for(var i = 0; i < events.length; i++) {
             markers = handler.addMarkers([
               {
+                "picture": {
+                  "url": "http://icons.iconarchive.com/icons/icons-land/vista-map-markers/32/Map-Marker-Marker-Outside-Azure-icon.png",
+                  "width":  32,
+                  "height": 32
+                },
                 "lat": events[i].latitude,
                 "lng": events[i].longitude,
                 "infowindow": 'Event: <a href="/events/'+ event[i].id + '">' + events[i].event_name + '</a>' + "<br>" + events[i].street_address
@@ -50,14 +59,26 @@ $(document).on('turbolinks:load', function(){
             ]);
           }
 
+
           for(var i = 0; i < organizations.length; i++) {
             markers = handler.addMarkers([
               {
+                "picture": {
+                  "url": "http://icons.iconarchive.com/icons/icons-land/vista-map-markers/32/Map-Marker-Marker-Outside-Pink-icon.png",
+                  "width":  32,
+                  "height": 32
+                },
                 "lat": organizations[i].latitude,
                 "lng": organizations[i].longitude,
                 "infowindow": 'Org: <a href="/organizations/'+ organizations[i].id + '">' + organizations[i].org_name + '</a>' + "<br>" + organizations[i].street_address
               }
             ]);
+          }
+
+
+          if(url !== "/" && crd !== null && crd !== undefined) {
+              console.log("GETTING DIRECTIONS");
+              setTimeout(getDirections(centerOnMarker), 5000);
           }
 
         });
@@ -90,4 +111,50 @@ function codeAddress(geocoding){
   }else{
     alert("Search field can't be blank");
   }
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+        crd = null;
+    }
+}
+
+function success(pos) {
+  crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log('Latitude : ' + crd.latitude);
+  console.log('Longitude: ' + crd.longitude);
+};
+
+function error(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+  crd = null;
+};
+
+
+function getDirections(destination) {
+  var directionsService = new google.maps.DirectionsService();
+  var directionsDisplay = new google.maps.DirectionsRenderer();
+  console.log("Debug 1");
+  // map = new google.maps.Map(document.getElementById("map-canvas"));
+
+  directionsDisplay.setMap(handler.getMap());
+
+  console.log("Debug 2");
+  var request = {
+    origin:      new google.maps.LatLng(crd.latitude, crd.longitude),
+    destination: new google.maps.LatLng(destination.latitude, destination.longitude),
+    travelMode:  google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    //Check if request is successful.
+    if (status == google.maps.DirectionsStatus.OK) {
+      console.log(status);
+      directionsDisplay.setDirections(response); //Display the directions result
+    }
+  });
 }
