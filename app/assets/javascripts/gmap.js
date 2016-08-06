@@ -10,7 +10,6 @@ $(document).on('turbolinks:load', function(){
       var events = event;
       $.ajax("/organizations.json").done(function(orgs){
         var organizations = orgs;
-        console.log(organizations);
 
         // work with googlemaps APIs
         handler = Gmaps.build('Google');
