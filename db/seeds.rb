@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Rake::Task['db:reset'].invoke
+# Rake::Task['db:reset'].invoke
 
 orgs_list = [
   [1, "Food for the Poor", "Food Pantry", "Michelle", "954-427-222", "6401 Lyons Road", "Coconut Creek", "FL", "33073", "org1@example.com", "1234"],
