@@ -1,45 +1,15 @@
-html {
-
-
-}
-
-body {
-
-
-}
-
-
 /*******************************************************************
-LAYOUT
+MAIN PAGE LAYOUT
 *******************************************************************/
 
-div {
-
-
-}
-
 #directions {
-
-
-}
-
-#map-container {
-
-
-}
-
-#map-canvas {
-
-
-}
-
-#geocoding_fields {
-
-
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 #panel-container {
-
+  display: flex;
 
 }
 
