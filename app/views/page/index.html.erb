@@ -1,5 +1,9 @@
-<h1>Page#index</h1>
-<p>Find me in app/views/page/index.html.erb</p>
+<div id="directions">
+  <h2>NEED HELP?</h2>
+  <p>
+    Find organizations and events near your area by entering your city or zip code in the map's search bar!
+  </p>
+</div>
 
 <div id="map-container">
   <div id="map-canvas"></div>
@@ -7,5 +11,30 @@
   <div id="geocoding_fields">
     <%= text_field_tag :search, params[:search], placeholder: "Enter a place", :id => 'search_box_geocoding', class: 'search_box' %>
     <%= button_tag "Search", id: "submit_button_geocoding", data: { disable_with: "Please wait..." }, class: "submit_button" %>
+  </div>
+</div>
+
+
+
+<div id="panel-container">
+  <div class="panel">
+    <h3>PANEL 1</h3>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h3>PANEL 2</h3>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h3>PANEL 3</h3>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
   </div>
 </div>
