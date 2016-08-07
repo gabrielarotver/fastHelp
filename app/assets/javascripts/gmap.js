@@ -54,7 +54,7 @@ $(document).on('turbolinks:load', function(){
                 },
                 "lat": events[i].latitude,
                 "lng": events[i].longitude,
-                "infowindow": 'Event: <a href="/events/'+ event[i].id + '">' + events[i].event_name + '</a>' + "<br>" + events[i].street_address
+                "infowindow": 'Event: <a href="/events/'+ event[i].id + '">' + events[i].title + '</a>' + "<br>" + events[i].street_address
               }
             ]);
           }
