@@ -14,10 +14,12 @@
  *= require_self
  */
 
- * {
-    box-sizing: border-box;
-  }
 
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
   body {
     margin: 0;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;

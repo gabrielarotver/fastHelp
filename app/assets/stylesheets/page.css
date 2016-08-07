@@ -29,14 +29,41 @@ MAIN PAGE LAYOUT
 }
 
 .panel {
-  /*text-align: center;
-  width: 30%;*/
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0,0,0,.50);
+  text-align: center;
+  width: 30%;
 }
 
 .panel div.panel-title {
-  /*background-color: yellow;
-  line-height: 3rem;*/
+  background-color: #d9d9d9;
+  border-color: #ddd;
+  line-height: 3rem;
+  margin-top: auto;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .panel h3 {
-  /*font-size: 3rem;*/
+  background-color:#d9d9d9;
+  border-radius: 10px;
+  border-bottom: 1px solid transparent;
+  font-size: 1rem;
+  margin-top: 5px;
+  }
+.panel p {
+  text-align: left;
+}
+
+.panel-btn {
+  font-size: 1rem;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    margin-bottom: 1rem;
 }
