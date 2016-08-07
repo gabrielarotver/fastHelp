@@ -32,8 +32,8 @@
     background-color: black;
     color: white;
     font-weight: bold;
-    padding: 1rem 0;
-    margin-bottom: 5rem;
+    padding: 0.5rem 0;
+    margin-bottom: 4rem;
   }
   #navigation {
     margin: 0;
@@ -54,10 +54,14 @@
   }
 
   #navigation li {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   list-style-type: none;
   }
 
   #navigation li:nth-child(2) {
     margin-right: auto;
+  }
+  #fastHelp {
+    font-size: 2em;
+    color: white;
   }
