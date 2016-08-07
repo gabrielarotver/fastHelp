@@ -10,7 +10,7 @@ $(document).ready(function() {
       fixedWeekCount: false,
 
       eventMouseover: function(calEvent, jsEvent) {
-          var tooltip = '<div class="tooltipevent">' + calEvent.title + '</div>';
+          var tooltip = '<div class="tooltipevent">' + calEvent.title + '<br>Address:' + calEvent.street_address + '</div>';
           $("body").append(tooltip);
           $(this).mouseover(function(e) {
               $(this).css('z-index', 10000);

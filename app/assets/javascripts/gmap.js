@@ -3,7 +3,7 @@ var crd;
 
 $(document).on('turbolinks:load', function(){
 
-  if(window.location.pathname === "/" || window.location.pathname.match("/events/") || window.location.pathname.match("/organizations/")) {
+  if($('div#map-canvas').length > 0) {
 
     $.ajax("/events.json").done(function(event){
       var events = event;
