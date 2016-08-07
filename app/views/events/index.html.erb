@@ -1,5 +1,7 @@
 <h1>Events</h1>
 
+
+
 <%= form_tag events_path, :method => :get do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
@@ -42,6 +44,8 @@
 </table>
 
 <br>
+
+<div id="calendar"></div>
 
 
 <% if current_organization %>
