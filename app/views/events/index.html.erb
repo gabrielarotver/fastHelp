@@ -1,8 +1,13 @@
-<% if current_organization %>
-  <h1>Your Events</h1>
-<% else %>
-  <h1>Events</h1>
-<% end %>
+<div class="title">
+  <% if current_organization %>
+    <h1>Your Events</h1>
+  <% else %>
+    <h1>Events</h1>
+  <% end %>
+
+  <img src="/assets/helpingHands.png" alt="Hands" />
+</div>
+
 
 <div id="calendar"></div>
 
@@ -13,7 +18,7 @@
       <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Search Near", :name => nil %>
     </p>
-  <% end %>
+  <% end %>2
 <% end %>
 
 <table>
