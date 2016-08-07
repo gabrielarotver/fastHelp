@@ -3,7 +3,7 @@ var crd;
 
 $(document).on('turbolinks:load', function(){
 
-  if(window.location.pathname === "/" || window.location.pathname.match("/events/") || window.location.pathname.match("/organizations/")) {
+  if($('div#map-canvas').length > 0) {
 
     $.ajax("/events.json").done(function(event){
       var events = event;
@@ -54,7 +54,7 @@ $(document).on('turbolinks:load', function(){
                 },
                 "lat": events[i].latitude,
                 "lng": events[i].longitude,
-                "infowindow": 'Event: <a href="/events/'+ event[i].id + '">' + events[i].event_name + '</a>' + "<br>" + events[i].street_address
+                "infowindow": 'Event: <a href="/events/'+ event[i].id + '">' + events[i].title + '</a>' + "<br>" + events[i].street_address
               }
             ]);
           }

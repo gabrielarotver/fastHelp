@@ -1,3 +1,32 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#calendar {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+// events displayed in the calendar
+div.fc-content {
+  color: black;
+  font-size: 0.8rem;
+  height: 1rem;
+}
+
+div.fc-content:hover {
+  background-color: #eadbe5;
+}
+
+.tooltipevent {
+  padding: 1rem;
+  background: #eadbe5;
+  position: absolute;
+  z-index: 10001;
+  font-family: serif;
+  font-size: 1rem;
+}

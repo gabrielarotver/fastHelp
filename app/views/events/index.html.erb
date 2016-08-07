@@ -1,10 +1,19 @@
-<h1>Events</h1>
+<% if current_organization %>
+  <h1>Your Events</h1>
+<% else %>
+  <h1>Events</h1>
+<% end %>
 
-<%= form_tag events_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search Near", :name => nil %>
-  </p>
+<div id="calendar"></div>
+
+<!-- search bar only visible to users, not organizations with own events -->
+<% if current_organization.nil? %>
+  <%= form_tag events_path, :method => :get do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search Near", :name => nil %>
+    </p>
+  <% end %>
 <% end %>
 
 <table>
@@ -42,6 +51,8 @@
 </table>
 
 <br>
+
+
 
 
 <% if current_organization %>
