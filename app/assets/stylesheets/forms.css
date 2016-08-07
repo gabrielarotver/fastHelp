@@ -2,6 +2,7 @@
   font-size: 3em;
   text-align: center;
   margin: .67em 0;
+  text-shadow: 0px 5px 15px #000;
 }
 form#new_organization {
   display: flex;
@@ -12,6 +13,19 @@ form#new_organization {
   font-family: 'Source Sans Pro', sans-serif;
    opacity:  1;
   font-weight: 300;
+}
+textarea#organization_description{
+  width: 100%;
+}
+#submit-btn{
+  width: 100%;
+}
+#btn-container{
+  width: 30%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0,0,0,.50);
 }
 div.actions input {
   display: block;
@@ -30,7 +44,6 @@ div.actions input {
 fieldset {
   background-color: #fff;
   box-shadow: 0 4px 4px rgba(0,0,0,.50);
-
 }
 .row1 {
   width: 80%;

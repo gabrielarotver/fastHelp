@@ -21,6 +21,13 @@
         <li id="fastHelp">FastHelp</li>
         <li><%= link_to "HOME", root_path %></li>
         <li><a href="#">ABOUT FASTHELP</a></li>
+        <div class="dropdown">
+          <button class="dropbtn">EVENTS</button>
+          <div class="dropdown-content">
+            <a href="#">List View</a>
+            <a href="#">Calender View</a>
+          </div>
+        </div>
         <li> <a href="#">CONTACT US</a></li>
         <% if current_organization %>
           <li><%= link_to "LOG OUT", logout_path %></li>

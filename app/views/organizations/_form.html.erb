@@ -79,10 +79,12 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, class: "form-control" %>
   </div>
+</fieldset>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions" id="submit-btn">
+    <div id="btn-container">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
-</fieldset>
 </form>
