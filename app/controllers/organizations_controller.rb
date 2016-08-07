@@ -40,7 +40,7 @@ class OrganizationsController < ApplicationController
         format.html { redirect_to root_url, notice: 'Organization was successfully created.' }
         format.json { render :show, status: :created, location: @organization }
       else
-        format.html { redirect_to 'signup' }
+        format.html { render :new }
         format.json { render json: @organization.errors, status: :unprocessable_entity }
       end
     end
