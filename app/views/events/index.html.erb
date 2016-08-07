@@ -1,54 +1,62 @@
-<% if current_organization %>
-  <h1>Your Events</h1>
-<% else %>
-  <h1>Events</h1>
-<% end %>
+<div class="title">
+  <% if current_organization %>
+    <h1>Your Events</h1>
+  <% else %>
+    <h1>Events</h1>
+  <% end %>
+
+  <img src="/assets/helpingHands.png" alt="Hands" />
+</div>
+
 
 <div id="calendar"></div>
 
-<!-- search bar only visible to users, not organizations with own events -->
-<% if current_organization.nil? %>
-  <%= form_tag events_path, :method => :get do %>
-    <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search Near", :name => nil %>
-    </p>
+<div id="all-events">
+  <!-- search bar only visible to users, not organizations with own events -->
+  <% if current_organization.nil? %>
+    <%= form_tag events_path, :method => :get do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search Near", :name => nil %>
+      </p>
+    <% end %>2
   <% end %>
-<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Organization</th>
-      <th>Event name</th>
-      <th>Date</th>
-      <th>Time</th>
-      <th>Street address</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip code</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= event.organization %></td>
-        <td><%= event.event_name %></td>
-        <td><%= event.date %></td>
-        <td><%= event.time %></td>
-        <td><%= event.street_address %></td>
-        <td><%= event.city %></td>
-        <td><%= event.state %></td>
-        <td><%= event.zip_code %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td> <% if current_organization && event.organization == current_organization %>  <%= link_to 'Edit', edit_event_path(event) %> <% end %></td>
-        <td><% if current_organization && event.organization == current_organization %><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %> <% end %></td>
+        <th>Organization</th>
+        <th>Event name</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Street address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip code</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.organization %></td>
+          <td><%= event.event_name %></td>
+          <td><%= event.date %></td>
+          <td><%= event.time %></td>
+          <td><%= event.street_address %></td>
+          <td><%= event.city %></td>
+          <td><%= event.state %></td>
+          <td><%= event.zip_code %></td>
+          <td><%= link_to 'Show', event %></td>
+          <td> <% if current_organization && event.organization == current_organization %>  <%= link_to 'Edit', edit_event_path(event) %> <% end %></td>
+          <td><% if current_organization && event.organization == current_organization %><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %> <% end %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
 
 <br>
 

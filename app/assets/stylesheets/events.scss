@@ -7,8 +7,14 @@ div#calendar {
   margin: 1rem auto;
 }
 
-h1 {
+.title {
   text-align: center;
+  margin: 0 auto;
+}
+
+.title img {
+  // width: 5rem;
+  // height: 5rem;
 }
 
 // events displayed in the calendar
