@@ -2,46 +2,42 @@
   <h1><%= @event.event_name %></h1>
 </div>
 
-<div id="event-details">
-  <div class="detail">
-    <h2>Organization:</h2>
-    <p>
-      <%= @event.organization %>
-    </p>
+<div id="event-container">
+  <div id="event-details">
+
+    <div class="detail">
+      <i class="fa fa-home" aria-hidden="true"></i><b> Organization:</b> <br> <span> <%= link_to @event.organization, @event.organization %></span>
+    </div>
+
+    <div class="detail">
+      <i class="fa fa-calendar" aria-hidden="true"></i><b> Date:</b><br>
+      <span><%= @event.date.strftime("%m/%d/%Y") %></span>
+    </div>
+
+    <div class="detail">
+      <i class="fa fa-clock-o" aria-hidden="true"></i><b> Time:</b> <br><i><%= @event.time.strftime("%H:%M %p") %></i>
+    </div>
+
+    <div class="detail">
+      <i class="fa fa-location-arrow" aria-hidden="true"></i><b> Address:</b><br> <i><%= @event.street_address %>
+      <%= @event.city %>, <%= @event.state %>, <%= @event.zip_code %></i>
+    </div>
+
+    <div class="detail">
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+      <b> About this event:</b>
+      <p>
+        <%= @event.description %>
+      </p>
+    </div>
+
   </div>
 
-  <div class="detail">
-    <h2>Date</h2>
-    <p>
-      <%= @event.date %>
-    </p>
-  </div>
 
-  <div class="detail">
-    <h2>Time</h2>
-    <p>
-      <%= @event.time.strftime("%H:%M %p") %>
-    </p>
-  </div>
-
-  <div class="detail">
-    <h2>Address</h2>
-    <p>
-      <%= @event.street_address %>
-      <%= @event.city %>, <%= @event.state %>, <%= @event.zip_code %>
-    </p>
-  </div>
-
-  <div class="detail">
-    <h2>About this event:</h2>
-    <%= @event.description %>
+  <div id="map-container">
+    <div id="map-canvas"></div>
   </div>
 </div>
-
-<div id="map-container">
-  <div id="map-canvas"></div>
-</div>
-
 
 <h3>Nearby Events</h3>
 <ul>

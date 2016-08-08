@@ -14,8 +14,10 @@ div#calendar {
 }
 
 .title img {
-  // width: 5rem;
-  // height: 5rem;
+  margin: .3 0;
+  padding: 0;
+  width: 40%;
+  height: 1rem;
 }
 
 // events displayed in the calendar
@@ -39,27 +41,45 @@ div.fc-content:hover {
 }
 
 // **********INDIVIDUAL EVENT DISPLAY********
-div.detail p, div.detail h2{
-  font-family: 'Yrsa', serif;
 
-}
-
-div.detail p {
-  font-size: 1.5rem;
-}
-
-div.detail h2 {
-  font-size: 2rem;
-  font-weight: normal;
-}
-
-div.detail {
-  text-align: center;
+div#event-container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
 }
 
 div#event-details {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: 0 auto;
+  width: 50%;
+  font-family: 'Yrsa', serif;
+  font-size: 1.2rem;
+  padding-right: 2rem;
+}
+
+div#event-container #map-container {
+  width: 50%;
+  height: 100%;
+  margin: auto auto;
+}
+
+div.detail{
+  width: 100%;
+  margin: 1rem 0;
+  overflow: visible;
+}
+
+div.detail p{
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+div.detail span {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: oblique !important;
+}
+
+.fa {
+  color: rgb(0, 123,200);
 }
