@@ -20,7 +20,7 @@ class OrganizationsController < ApplicationController
   # GET /organizations/new
   def new
     @organization = Organization.new
-    # @organization.errors = flash[:errors] if flash[:errors]
+    @error_key_names = {"password" => "Password", "org_name" => "Organization Name", "contact_name" => "Contact Name", "contact_number" => "Contact Number","street_address" => "Street Address", "city" => "City", "state" => "State", "zip_code" => "Zip Code", "email" => "Email" }
   end
 
   # GET /organizations/1/edit
