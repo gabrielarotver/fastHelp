@@ -27,7 +27,7 @@ input#email, input#password{
 .row1.login-row1 {
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
+  width: 40%;
   margin: auto;
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
