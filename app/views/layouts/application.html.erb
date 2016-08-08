@@ -32,9 +32,13 @@
         <% if current_organization %>
           <li><%= link_to "LOG OUT", logout_path %></li>
         <% else %>
-          <li><h4>ORGANIZATION<h4></li>
-           <li><%= link_to "SIGN UP", signup_path %></li>
-           <li><%= link_to "LOG IN", login_path%></li>
+          <div class="dropdown">
+            <button class="dropbtn">ORGANIZATION</button>
+            <div class="dropdown-content">
+              <%= link_to "Sign Up", signup_path %>
+              <%= link_to "Login", login_path %>
+            </div>
+          </div>
         <% end %>
       </ul>
     </nav>
