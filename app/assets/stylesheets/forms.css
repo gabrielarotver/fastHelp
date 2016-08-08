@@ -1,9 +1,9 @@
 /*Login Page*/
 #login-title{
   text-align:center;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
-  text-shadow: 0px 5px 15px #000;
+  margin-bottom: -1rem;
 }
 input#email, input#password{
   display: block;
@@ -27,7 +27,7 @@ input#email, input#password{
 .row1.login-row1 {
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
+  width: 40%;
   margin: auto;
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
