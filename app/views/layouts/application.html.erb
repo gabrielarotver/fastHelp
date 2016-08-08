@@ -24,8 +24,8 @@
         <div class="dropdown">
           <button class="dropbtn">EVENTS</button>
           <div class="dropdown-content">
-            <a href="#">List View</a>
-            <a href="#">Calender View</a>
+            <%= link_to "List View", events_path(:format => "list") %>
+            <%= link_to "Calendar View", events_path(:format => "calendar") %>
           </div>
         </div>
         <li> <a href="#">CONTACT</a></li>
