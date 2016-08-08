@@ -1,6 +1,6 @@
 var handler;
 var crd;
-
+var id;
 $(document).on('turbolinks:load', function(){
 
   if($('div#map-canvas').length > 0) {
@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function(){
         var centerOnMarker = organizations[0];
 
         var url = window.location.pathname;
-        var zoomInValue, id;
+        var zoomInValue;
 
         if(url === "/") {
           zoomInValue = 10;
@@ -25,8 +25,8 @@ $(document).on('turbolinks:load', function(){
         } else {
           getLocation();
           zoomInValue = 20;
-          id = parseInt(url.substring(url.lastIndexOf('/') + 1)) - 1;
-          centerOnMarker = url.match("/events/") ? events[id] : organizations[id];
+          id = parseInt(url.substring(url.lastIndexOf('/') + 1));
+          centerOnMarker = url.match("/events/") ? events.find(findObjById) : organizations.find(findObjById);
         }
 
         var mapOptions = {
@@ -157,4 +157,9 @@ function getDirections(destination) {
       directionsDisplay.setDirections(response); //Display the directions result
     }
   });
+}
+
+
+function findObjById(eventOrg) {
+    return eventOrg.id === id;
 }
