@@ -45,14 +45,14 @@ div.fc-content:hover {
 div#event-container {
   display: flex;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
 }
 
 div#event-details {
   width: 50%;
   font-family: 'Yrsa', serif;
   font-size: 1.2rem;
-  padding-right: 2rem;
+  padding: 0 2rem;
 }
 
 div#event-container #map-container {

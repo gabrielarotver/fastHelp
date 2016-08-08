@@ -1,7 +1,16 @@
-<p>
-  <strong>Org name:</strong>
-  <%= @organization.org_name %>
-</p>
+<div class="title">
+  <h1><%= @organization.org_name %></h1>
+</div>
+
+<div id="organization-container">
+  <div class="organization-details">
+
+  </div>
+
+
+
+
+</div>
 
 <p>
   <strong>Org type:</strong>
@@ -9,12 +18,7 @@
 </p>
 
 <p>
-  <strong>Contact name:</strong>
-  <%= @organization.contact_name %>
-</p>
-
-<p>
-  <strong>Contact number:</strong>
+  <strong>Contact the Organization:</strong>
   <%= @organization.contact_number %>
 </p>
 
@@ -48,28 +52,9 @@
   <%= @organization.description %>
 </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @organization.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @organization.longitude %>
-</p>
-
 <div id="map-container">
   <div id="map-canvas"></div>
 </div>
-
-<h3>Nearby Organizations</h3>
-<ul>
-  <% if !@organization.nearbys(30).nil? %>
-    <% for org in @organization.nearbys(30) %>
-      <li><%= link_to org.address, org %> (<%= org.distance.round(2) %>) miles </li>
-    <% end %>
-  <% end %>
-</ul>
 
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
