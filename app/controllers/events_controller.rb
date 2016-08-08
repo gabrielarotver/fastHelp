@@ -14,6 +14,12 @@ class EventsController < ApplicationController
     else
       @events = current_organization.events.all
     end
+
+    if params[:format] == "list"
+      render "index_list"
+    else
+      render "index"
+    end
   end
 
   # GET /events/1
