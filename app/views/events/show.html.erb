@@ -1,57 +1,42 @@
-<p>
-  <strong>Organization:</strong>
-  <%= @event.organization %>
-</p>
+<div class="title">
+  <h1><%= @event.event_name %></h1>
+</div>
 
-<p>
-  <strong>Event name:</strong>
-  <%= @event.event_name %>
-</p>
+<div id="event-details">
+  <div class="detail">
+    <h2>Organization:</h2>
+    <p>
+      <%= @event.organization %>
+    </p>
+  </div>
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
+  <div class="detail">
+    <h2>Date</h2>
+    <p>
+      <%= @event.date %>
+    </p>
+  </div>
 
-<p>
-  <strong>Time:</strong>
-  <%= @event.time %>
-</p>
+  <div class="detail">
+    <h2>Time</h2>
+    <p>
+      <%= @event.time.strftime("%H:%M %p") %>
+    </p>
+  </div>
 
-<p>
-  <strong>Street address:</strong>
-  <%= @event.street_address %>
-</p>
+  <div class="detail">
+    <h2>Address</h2>
+    <p>
+      <%= @event.street_address %>
+      <%= @event.city %>, <%= @event.state %>, <%= @event.zip_code %>
+    </p>
+  </div>
 
-<p>
-  <strong>City:</strong>
-  <%= @event.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @event.state %>
-</p>
-
-<p>
-  <strong>Zip code:</strong>
-  <%= @event.zip_code %>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @event.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @event.longitude %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+  <div class="detail">
+    <h2>About this event:</h2>
+    <%= @event.description %>
+  </div>
+</div>
 
 <div id="map-container">
   <div id="map-canvas"></div>

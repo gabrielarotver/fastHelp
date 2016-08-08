@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// ***********************CALENDAR DISPLAY*****
 div#calendar {
   width: 80%;
   margin: 1rem auto;
@@ -9,7 +10,7 @@ div#calendar {
 
 .title {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
 }
 
 .title img {
@@ -35,4 +36,28 @@ div.fc-content:hover {
   z-index: 10001;
   font-family: serif;
   font-size: 1rem;
+}
+
+// **********INDIVIDUAL EVENT DISPLAY********
+div.detail p, div.detail h2{
+  font-family: 'Yrsa', serif;
+
+}
+
+div.detail p {
+  font-size: 1.5rem;
+}
+
+div.detail h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+div.detail {
+  text-align: center;
+}
+
+div#event-details {
+  display: flex;
+  flex-wrap: wrap;
 }
