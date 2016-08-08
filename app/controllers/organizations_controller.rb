@@ -20,6 +20,7 @@ class OrganizationsController < ApplicationController
   # GET /organizations/new
   def new
     @organization = Organization.new
+    # @organization.errors = flash[:errors] if flash[:errors]
   end
 
   # GET /organizations/1/edit
@@ -40,7 +41,7 @@ class OrganizationsController < ApplicationController
         format.html { redirect_to root_url, notice: 'Organization was successfully created.' }
         format.json { render :show, status: :created, location: @organization }
       else
-        format.html { render :new }
+        format.html { redirect_to new_organization_path, flash: {errors: @organization.errors} }
         format.json { render json: @organization.errors, status: :unprocessable_entity }
       end
     end

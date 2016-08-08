@@ -1,13 +1,16 @@
 <div class="form-container">
 
 <%= form_for(organization) do |f| %>
-  <% if organization.errors.any? %>
+  <% if !flash.empty? %>
     <div id="error_explanation">
-      <h2><%= pluralize(organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+      <%= flash["password"] %>
+      <h2><%= pluralize(flash.count, "error") %> prohibited this organization from being saved:</h2>
 
       <ul>
-      <% organization.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% flash.each do |message| %>
+        <%message[1].each do |k, v|%>
+          <li><%= k.capitalize %> : <%= v.first %></li>
+        <% end %>
       <% end %>
       </ul>
     </div>
