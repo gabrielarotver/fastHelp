@@ -68,11 +68,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
     <%= f.label :password %>
     <%= f.password_field :password, class: "form-control" %>
   </div>
@@ -81,6 +76,12 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, class: "form-control" %>
   </div>
+</fieldset>
+<fieldset class="row4">
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
 </fieldset>
 
   <div class="actions" id="submit-btn">
