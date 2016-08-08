@@ -32,7 +32,7 @@
         <td><%= event.organization %></td>
         <td><%= event.event_name %></td>
         <td><%= event.date %></td>
-        <td><%= event.time %></td>
+        <td><%= event.time.strftime("%r") %></td>
         <td><%= event.street_address %></td>
         <td><%= event.city %></td>
         <td><%= event.state %></td>
