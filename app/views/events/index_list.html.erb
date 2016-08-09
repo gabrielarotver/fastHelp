@@ -57,9 +57,17 @@
 <div id="events-container">
   <% @events.each do |event| %>
     <div class="singleEventContainer">
-      <div class="eventImageInfo">
-        <%= image_tag event.image.url(:medium) %>
-      </div>
+      <%= link_to event do %>
+        <div class="eventImageInfo">
+          <%= image_tag event.image.url(:medium) %>
+          <div class="specificInfo">
+            <%= event.event_name %> <br>
+            <%= event.date.strftime("%m/%d/%Y") %>
+            <%= event.time.strftime("%r") %>
+          </div>
+        </div>
+      <% end %>
+
       <div class="links">
         <%= link_to 'Show', event %>
         <%= link_to 'Edit', edit_event_path(event) %>
