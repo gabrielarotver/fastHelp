@@ -1,13 +1,12 @@
-<div class="title">
+<div class="title" id="with-background">
   <h1><%= @organization.org_name %></h1>
+  <span>Organization</span>
 </div>
 
 <div id="organization-container">
   <div class="organization-details">
 
   </div>
-
-
 
 
 </div>
@@ -18,29 +17,20 @@
 </p>
 
 <p>
+  <strong>Primary Contact:</strong>
+  <%= @organization.contact_name %>
+</p>
+
+<p>
   <strong>Contact the Organization:</strong>
   <%= @organization.contact_number %>
 </p>
 
 <p>
-  <strong>Street address:</strong>
-  <%= @organization.street_address %>
+  <strong>Visit <%= @organization.org_name %></strong>
+  <%= @organization.street_address %>, <%= @organization.city %>, <%= @organization.state %>, <%= @organization.zip_code %>
 </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @organization.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @organization.state %>
-</p>
-
-<p>
-  <strong>Zip code:</strong>
-  <%= @organization.zip_code %>
-</p>
 
 <p>
   <strong>Email:</strong>
