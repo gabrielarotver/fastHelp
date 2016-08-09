@@ -4,6 +4,13 @@
   font-size: 4rem;
   margin-top: 4rem;
 }
+
+.alert {
+  margin-top: 3rem;
+  color: red;
+  font-size: 2rem;
+  text-align: center;
+}
 input#email, input#password{
   display: block;
   width: 100%;
