@@ -84,7 +84,11 @@
     <%= f.file_field :image %>
   </div>
     <div class="field">
-      <%= image_tag organization.image.url(:thumb) %>
+      <div>
+        <% if organization.image.exists? %>
+          <%= image_tag organization.image.url(:thumb) %><br/>
+        <% end %>
+      </div>
       <%= f.label :description %>
       <%= f.text_area :description %>
     </div>
