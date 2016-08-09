@@ -12,6 +12,9 @@ class Event < ApplicationRecord
   validates :state, presence: true
   validates :zip_code, presence: true
 
+  has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#" }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
   def to_s
     event_name
   end
@@ -23,5 +26,5 @@ class Event < ApplicationRecord
   def address_changed?
     street_address_changed? || city_changed? || state_changed? || zip_code_changed?
   end
-  
+
 end
