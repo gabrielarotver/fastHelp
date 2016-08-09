@@ -2,8 +2,7 @@
 #login-title{
   text-align:center;
   font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: -1rem;
+  margin-top: 4rem;
 }
 input#email, input#password{
   display: block;

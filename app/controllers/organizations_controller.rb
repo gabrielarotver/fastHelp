@@ -1,6 +1,8 @@
 class OrganizationsController < ApplicationController
   before_action :set_organization, only: [:show, :edit, :update, :destroy]
 
+  before_action :authorize, only: [:edit, :update, :destroy]
+
   # GET /organizations
   # GET /organizations.json
   def index
@@ -80,5 +82,15 @@ class OrganizationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def organization_params
       params.require(:organization).permit(:org_name, :org_type, :org_type_text, :contact_name, :contact_number, :street_address, :city, :state, :zip_code, :email, :password, :password_confirmation, :image, :description)
+    end
+
+    def authorize
+      if current_organization.nil?
+        redirect_to login_url, alert: "Not authorized! Please log in."
+      else
+        if @organization != current_organization
+          redirect_to root_path, alert: "Not authorized! Only #{@organization} has access to edit information on this page!"
+        end
+      end
     end
 end
