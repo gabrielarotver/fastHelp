@@ -11,11 +11,11 @@
 <table>
   <thead>
     <tr>
-      <th>Org name</th>
-      <th>Org type</th>
-      <th>Contact name</th>
-      <th>Contact number</th>
-      <th>Street address</th>
+      <th>Organization name</th>
+      <th>Organization type</th>
+      <th>Contact Name</th>
+      <th>Contact Number</th>
+      <th>Street Address</th>
       <th>City</th>
       <th>State</th>
       <th>Zip code</th>
@@ -36,6 +36,13 @@
         <td><%= organization.state %></td>
         <td><%= organization.zip_code %></td>
         <td><%= organization.email %></td>
+        <td>
+          <% if !(organization.image.url == "/images/original/missing.png") %>
+            <%= image_tag organization.image.url(:medium) %>
+          <% else %>
+            <%= organization.org_name %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', organization %></td>
         <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
         <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>

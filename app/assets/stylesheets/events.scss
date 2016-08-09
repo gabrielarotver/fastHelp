@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// ***********************CALENDAR DISPLAY*****
+// ***********************CALENDAR DISPLAY***********************
 div#calendar {
   width: 80%;
   margin: 1rem auto;
@@ -40,7 +40,7 @@ div.fc-content:hover {
   font-size: 1rem;
 }
 
-// **********INDIVIDUAL EVENT DISPLAY********
+// ***********************INDIVIDUAL EVENT DISPLAY***********************
 
 div#event-container {
   display: flex;
@@ -84,7 +84,7 @@ div.detail span {
   color: rgb(0, 123,200);
 }
 
-// *************EVENTS LIST*******************
+// ***********************EVENTS LIST***********************
 div#events-container {
   display: flex;
   justify-content: space-between;
