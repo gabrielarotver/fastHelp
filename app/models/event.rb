@@ -15,6 +15,8 @@ class Event < ApplicationRecord
   has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+  validate :date, :expiration_date_cannot_be_in_the_past
+
   def to_s
     event_name
   end
@@ -27,4 +29,9 @@ class Event < ApplicationRecord
     street_address_changed? || city_changed? || state_changed? || zip_code_changed?
   end
 
+  def expiration_date_cannot_be_in_the_past
+    if date.present? && date < Date.today
+      errors.add(:date, "can't be in the past")
+    end
+  end
 end
