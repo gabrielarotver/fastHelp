@@ -1,4 +1,6 @@
 
+
+
 <div id="all-events">
   <!-- search bar only visible to users, not organizations with own events -->
   <% if current_organization.nil? %>
@@ -37,6 +39,12 @@
         <td><%= event.city %></td>
         <td><%= event.state %></td>
         <td><%= event.zip_code %></td>
+        <td><% if !(event.image.url == "/images/original/missing.png") %>
+          <%= image_tag event.image.url(:medium) %>
+          <% else %>
+            <%= event.event_name %>
+        <% end %>
+      </td>
         <td><%= link_to 'Show', event %></td>
         <td> <% if current_organization && event.organization == current_organization %>  <%= link_to 'Edit', edit_event_path(event) %> <% end %></td>
         <td><% if current_organization && event.organization == current_organization %><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %> <% end %></td>
