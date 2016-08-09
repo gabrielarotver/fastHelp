@@ -1,54 +1,62 @@
-<div class="title" id="with-background">
-  <h1><%= @organization.org_name %></h1>
-  <span>Organization</span>
+<div class="headerWithImage">
+  <%= image_tag @organization.image.url %>
+  <div class="center">
+    <h1><%= @organization.org_name %></h1>
+    <span>Organization</span>
+  </div>
 </div>
 
-<div id="organization-container">
-  <div class="organization-details">
+
+<div class="organizationContainer">
+
+  <div class="orgDetails">
+    <h2>About</h2>
+
+    <div class="detail">
+      <b>Organization Type: </b><%= @organization.org_type %>
+    </div>
+
+    <div class="detail">
+      <p>
+        <%= @organization.description %>
+      </p>
+    </div>
+
+    <div class="detail">
+      <b>Organization's Primary Contact Phone Number:</b> <br> <span><%= @organization.contact_number %></span>
+    </div>
+
+    <div class="detail">
+      <b>Organization's Primary Email</b> <span><%= @organization.email %></span>
+    </div>
 
   </div>
 
+  <div class="mapAddress">
+    <div id="map-container">
+      <div id="map-canvas"></div>
+    </div>
+
+    <div id="address-container">
+      <p> <b>Address: </b>
+        <%= @organization.street_address %>, <%= @organization.city %>, <%= @organization.state %>, <%= @organization.zip_code %>
+      </p>
+    </div>
+
+  </div>
 
 </div>
-
-<p>
-  <strong>Org type:</strong>
-  <%= @organization.org_type %>
-</p>
 
 <p>
   <strong>Primary Contact:</strong>
   <%= @organization.contact_name %>
 </p>
 
-<p>
-  <strong>Contact the Organization:</strong>
-  <%= @organization.contact_number %>
-</p>
 
-<p>
-  <strong>Visit <%= @organization.org_name %></strong>
-  <%= @organization.street_address %>, <%= @organization.city %>, <%= @organization.state %>, <%= @organization.zip_code %>
-</p>
-
-
-<p>
-  <strong>Email:</strong>
-  <%= @organization.email %>
-</p>
 <p>
   <%= image_tag @organization.image.url(:large) %>
-
 </p>
 
-<p>
-  <strong>About the Organization:</strong>
-  <%= @organization.description %>
-</p>
-
-<div id="map-container">
-  <div id="map-canvas"></div>
-</div>
 
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>

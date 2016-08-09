@@ -2,9 +2,93 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.title span {
+.center span {
   display: block;
-  margin-top: 1rem;
-  color: gray;
+  margin-top: 2rem;
+  color: white;
   font-style: italic;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: -1px 0 rgb(0, 123,200), 0 1px rgb(0, 123,200), 1px 0 rgb(0, 123,200), 0 -1px rgb(0, 123,200);
+  // text-shadow: 2px 2px 8px rgb(0, 123,200);
+}
+
+.headerWithImage {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+}
+
+div.headerWithImage img{
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.center h1 {
+  color: inherit;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bolder;
+  // text-shadow: -1px 0 rgb(0, 123,200), 0 1px rgb(0, 123,200), 1px 0 rgb(0, 123,200), 0 -1px rgb(0, 123,200);
+  text-shadow: 2px 2px 8px rgb(0, 123,200);
+  font-size: 4rem;
+}
+
+
+
+// *********ABOUT ORG****************************
+.organizationContainer {
+  display: flex;
+  width: 90%;
+  min-height: 30rem;
+  margin: 3rem auto;
+  font-size: 1rem;
+}
+
+.orgDetails {
+  width: 70%;
+}
+
+.mapAddress {
+  width: 30%;
+}
+
+div.mapAddress #map-container {
+  width: 100%;
+  height: 70%;
+  margin: auto auto;
+}
+
+div.mapAddress #map-container #map-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+div#address-container {
+  height: 30%;
+}
+
+div#address-container p {
+  font-size: 1rem;
+  margin: 2rem auto;
+  width: 60%;
+}
+
+div.orgDetails h2 {
+  font-size: 3rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+
+div.orgDetails {
+
 }
