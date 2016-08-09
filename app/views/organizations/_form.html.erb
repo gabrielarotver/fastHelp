@@ -78,14 +78,13 @@
   </div>
 </fieldset>
 
-<%= image_tag organization.image.url %>
-
 <fieldset class="row4">
   <div class="field">
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
     <div class="field">
+      <%= image_tag organization.image.url(:thumb) %>
       <%= f.label :description %>
       <%= f.text_area :description %>
     </div>

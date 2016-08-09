@@ -35,7 +35,18 @@ input#email, input#password{
   font-weight: 300;
 }
 /**/
-
+.edit_event, .edit_organization {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  opacity:  1;
+}
+#edit_event_title, #edit_org_title {
+  text-align:center;
+  margin: 2rem;
+}
+/**/
 #org-title {
   font-size: 3em;
   text-align: center;
