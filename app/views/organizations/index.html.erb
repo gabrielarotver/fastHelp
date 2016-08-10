@@ -1,12 +1,37 @@
-<h1>Organizations</h1>
+<div class="title">
+  <h1>Organizations Directory</h1>
+</div>
 
-<%= form_tag organizations_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search Near", :name => nil %>
-  </p>
-<% end %>
 
+
+
+<div id="index-orgs-container">
+
+  <div id="search-near-me">
+    <%= form_tag organizations_path, :method => :get do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search Near", :name => nil %>
+      </p>
+    <% end %>
+
+  </div>
+
+  <div id="all-orgs">
+    <% @organizations.each do |organization| %>
+      <div class="org">
+        <%= image_tag organization.image.url(:medium) %>
+        <div class="orgInfo">
+          <%= link_to organization.org_name, organization %> <br>
+          <% if !organization.description.nil? %>
+            <%= organization.description.truncate(300) %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
 
 <table>
   <thead>
