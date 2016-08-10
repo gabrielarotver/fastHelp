@@ -20,6 +20,7 @@
       <th>State</th>
       <th>Zip code</th>
       <th>Email</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -36,6 +37,8 @@
         <td><%= organization.state %></td>
         <td><%= organization.zip_code %></td>
         <td><%= organization.email %></td>
+        <td><%= organization.description %></td>
+
         <td>
           <% if !(organization.image.url == "/images/original/missing.png") %>
             <%= image_tag organization.image.url(:medium) %>
