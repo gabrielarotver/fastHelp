@@ -22,18 +22,19 @@ end
 p Organization.all
 
 events_list = [
-  ["Food Giveaway" , "2016-08-06", "8:00:00", "3600 West Sample Road" , "Coconut Creek", "FL", "33073"],
+  ["Food Giveaway" , "2016-08-18", "8:00:00", "3600 West Sample Road" , "Coconut Creek", "FL", "33073", "Distribute food to underprivileged residents of Coconut Creek who have difficulty purchasing enough food to avoid hunger, food donations are welcome."],
 
-  ["Hands are for Helping" ,  "2016-08-06", "9:00:00", "4000 Morikami Park Rd", "Boca Raton", "FL", "33427" ],
+  ["Hands are for Helping" ,  "2016-08-18", "9:00:00", "4000 Morikami Park Rd", "Boca Raton", "FL", "33427", "Give art lessons to encourage underprivileged 6-12 year olds students to share supplies and to work cooperatively together in the classroom while completing an art activity, art supplies donations are welcome" ],
 
-  ["Mending Hearts with Hope" ,  "2016-08-06", "10:00:00", "1950 Eisenhower Boulevard", "North Lauderdale", "FL", "33068"],
+  ["Mending Hearts with Hope" ,  "2016-08-23", "10:00:00", "1950 Eisenhower Boulevard", "North Lauderdale", "FL", "33068", "Volunteer at the North Lauderdale Animal Shelter by feeding pets and cleaning pets cages, pet supplies donations are welcome."],
 
-  ["Coral Gables Helping Hands" , "2016-08-06", "11:00:00", "285 Aragon Avenue","Coral Gables", "FL", "33134"],
+  ["Coral Gables Helping Hands" , "2016-08-29", "11:00:00", "285 Aragon Avenue","Coral Gables", "FL", "33134", "Distribute clothes and swimsuits according to their age, size and children's name at Coral Gables, clothing donations are welcome." ],
 
-  ["Toys for Tots" ,  "2016-08-06", "10:00:00", "5701 Sunset Dr" , "Miami", "FL", "33128"]
+  ["Toys for Tots" ,  "2016-08-27", "10:00:00", "5701 Sunset Dr" , "Miami", "FL", "33128", "Sort and distribute toys to underprivileged children from ages 3-12 years old in Miami. Toys dropoffs are welcome."]
 ]
 events_list.zip(organizations) do |event, organization|
-  event_name, date, time, street_address, city, state, zip_code = event
-Event.create(organization: organization, event_name: event_name, date: date, time: time, street_address: street_address, city: city, state: state, zip_code: zip_code)
+  event_name, date, time, street_address, city, state, zip_code, description = event
+  ev = Event.create(organization: organization, event_name: event_name, date: date, time: time, street_address: street_address, city: city, state: state, zip_code: zip_code, description: description)
+  # p ev.errors
 end
 p Event.all
