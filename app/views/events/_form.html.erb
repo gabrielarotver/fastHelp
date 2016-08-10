@@ -19,12 +19,12 @@
   </fieldset>
 
   <fieldset class="row1 event-row1">
-  <div class="field field-date">
+  <div class="field field-dateTime">
     <%= f.label :date %>
     <%= f.date_select :date %>
   </div>
 
-  <div class="field field-time">
+  <div class="field field-dateTime">
     <%= f.label :time %>
     <%= f.time_select :time,  {ampm: true, minute_step: 15} %>
   </div>
@@ -54,6 +54,11 @@
 
 <fieldset class="row2">
   <div class="field">
+    <div>
+      <% if event.image.exists? %>
+        <%= image_tag event.image.url(:thumb) %><br/>
+      <% end %>
+    </div>
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div>

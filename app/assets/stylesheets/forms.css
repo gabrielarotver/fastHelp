@@ -43,7 +43,7 @@ div.actions input:hover{
 
 /***********ORG FORM********************/
 
-form#new_organization, form.edit_organization, form#new_event {
+form#new_organization, form.edit_organization, form#new_event, .edit_event {
   width: 70%;
   margin: 0 auto;
   display: flex;
@@ -75,147 +75,54 @@ textarea#organization_description{
   min-height: 5rem;
 }
 
+#otherField {
+  margin-top: 0.5rem;
+  display: none;    /* for jQuery css method */
+}
+
+select#organization_org_type, input#org_type_text {
+width: 100%;
+padding: 6px 12px;
+font-size: 14px;
+color: #555;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
 /********************NEW EVENTS FORM***********************/
-
-form#new_event {
-  width: 60%;
-}
-
-.edit_event {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  opacity:  1;
-}
-
-
-
 
 fieldset.event-row1 {
   padding: 1rem;
   text-align: center;
 }
-.field-date, .field-time {
+.field-dateTime {
   display:inline;
   margin-right: 5rem;
 }
 .row1 label{
   display:inline;
 }
-#event-title {
-  font-size: 3em;
-  text-align: center;
-  margin: .67em 0;
-}
-form#new_event {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: auto;
-  justify-content: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  opacity:  1;
-  font-weight: 300;
-}
-.event-row2 {
-  width: 40%;
-  margin: 0rem;
-}
-.event-row3 {
-  width: 40%;
-  margin: 0rem;
-}
+
+
 textarea#event_description{
   height: 16em;
 }
-#event_date_1i{
-  width: 10%;
-  height: 34px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-#event_date_2i{
-  width: 10%;
-  height: 34px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-#event_date_3i{
-  width: 10%;
-  height: 34px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-#event_time_4i{
-  width: 10%;
-  height: 34px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-#event_time_5i{
-  width: 10%;
-  height: 34px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.row1 > div {
 
-}
-select#organization_org_type {
-display: block;
-width: 100%;
-height: 34px;
-padding: 6px 12px;
-font-size: 14px;
-line-height: 1.42857143;
-color: #555;
-background-color: #fff;
-background-image: none;
-border: 1px solid #ccc;
-border-radius: 4px;
-}
-#otherField {
-  display: none;    /* for jQuery css method */
-}
-input#org_type_text {
-  display: block;
-  width: 100%;
+/*#event_date_1i, #event_date_2i, #event_date_3i, #event_time_4i, #event_time_5i{*/
+div.field.field-dateTime select {
+  width: 10%;
   height: 34px;
-  padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857143;
   color: #555;
   background-color: #fff;
-  background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+
+
+
 
 /*BOOTSTRAP CLASSES*/
 .form-control {
