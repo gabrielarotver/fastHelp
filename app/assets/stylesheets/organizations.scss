@@ -41,19 +41,20 @@ div.headerWithImage img{
 // ***************************ORG INDEX********************
 
 div#index-orgs-container {
-  width: 90%;
-  display: flex;
+  width: 75%;
   margin: 0 auto;
 }
 
 div#search-near-me {
-  width: 20%;
-  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
-div#all-orgs{
-  width: 80%;
+div#search-near-me form {
+  display: flex;
 }
+
 div.org {
   display: flex;
   width: 100%;

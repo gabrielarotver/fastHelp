@@ -2,10 +2,10 @@
 MAIN PAGE LAYOUT
 *******************************************************************/
 
-#directions h1, h1 {
-  font-family: 'Lora', serif;
+#directions h1 {
+  /*font-family: 'Lora', serif;*/
   color: black;
-  font-size: 3rem;
+  /*font-size: 3rem;*/
   font-weight: normal;
   margin: 0.2rem;
   text-align: center;
