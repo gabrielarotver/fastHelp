@@ -41,23 +41,24 @@ div.headerWithImage img{
 // ***************************ORG INDEX********************
 
 div#index-orgs-container {
-  width: 90%;
-  display: flex;
+  width: 75%;
   margin: 0 auto;
 }
 
 div#search-near-me {
-  width: 20%;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
-div#all-orgs{
-  width: 80%;
+div#search-near-me form {
+  display: flex;
 }
+
 div.org {
   display: flex;
   width: 100%;
-  margin: 1rem;
+  margin-top: 1rem;
 }
 
 div.org img {
@@ -69,8 +70,22 @@ div.org img {
 div.orgInfo {
   margin-left: 1rem;
   font-size: 1rem;
+  min-height: 5rem;
 }
 
+div.orgInfo a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(0, 123,200);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+div.orgInfo a:hover {
+  background-color: white;
+  color: #003366;
+}
 
 // *********ABOUT ORG****************************
 .organizationContainer {
