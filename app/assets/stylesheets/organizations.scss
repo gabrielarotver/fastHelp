@@ -1,7 +1,3 @@
-// Place all the styles related to the Organizations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .center span {
   display: block;
   margin-top: 2rem;
@@ -42,6 +38,38 @@ div.headerWithImage img{
   font-size: 4rem;
 }
 
+// ***************************ORG INDEX********************
+
+div#index-orgs-container {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+}
+
+div#search-near-me {
+  width: 20%;
+  margin: 0;
+}
+
+div#all-orgs{
+  width: 80%;
+}
+div.org {
+  display: flex;
+  width: 100%;
+  margin: 1rem;
+}
+
+div.org img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+div.orgInfo {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
 
 
 // *********ABOUT ORG****************************
