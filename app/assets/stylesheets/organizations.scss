@@ -48,7 +48,7 @@ div#index-orgs-container {
 
 div#search-near-me {
   width: 20%;
-  margin: 0;
+  margin: 1rem;
 }
 
 div#all-orgs{
@@ -57,7 +57,7 @@ div#all-orgs{
 div.org {
   display: flex;
   width: 100%;
-  margin: 1rem;
+  margin-top: 1rem;
 }
 
 div.org img {
@@ -69,8 +69,22 @@ div.org img {
 div.orgInfo {
   margin-left: 1rem;
   font-size: 1rem;
+  min-height: 5rem;
 }
 
+div.orgInfo a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(0, 123,200);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+div.orgInfo a:hover {
+  background-color: white;
+  color: #003366;
+}
 
 // *********ABOUT ORG****************************
 .organizationContainer {
