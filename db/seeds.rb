@@ -9,15 +9,15 @@
 # Rake::Task['db:reset'].invoke
 
 orgs_list = [
-  ["Food for the Poor", "Food Pantry", "Michelle", "954-427-222", "6401 Lyons Road", "Coconut Creek", "FL", "33073", "org1@example.com", "1234"],
-  ["Cross International Catholic Outreach", "Shelter", "Chelsey", "561-392-921", "2700 N. Military TrailSuite 240" , "Boca Raton", "FL", "33427", "org2@example.com", "1234"],
-  ["Family Central", "Shelter", "Sharlene", "954-720-1000", "840 S.W. 81st Ave.", "North Lauderdale", "FL", "33068", "org3@example.com", "1234"],
-  ["Early Learning Coalition of Miami-Dade/Monroe Inc.", "Food Pantry","Mike", "305-646-7220", "2555 Ponce de Leon Blvd. 5th floor", "Coral Gables", "FL", "33134", "org4@example.com", "1234"],
-  ["Our Kids of Miami-Dade/Monroe", "Soup Kitchen", "Jose", "305-455-6000", "401 N.W. Second Ave. 10th floor", "Miami", "FL", "33128", "org5@example.com",  "1234"]
+  ["Food for the Poor", "Food Pantry", "Michelle Gondalez", "954-427-222", "6401 Lyons Road", "Coconut Creek", "FL", "33073", "org1@example.com", "1234", "Food For The Poor, Inc. (FFP) is an ecumenical Christian nonprofit organization based in Coconut Creek, Florida, USA that provides food, medicine, and shelter, among other services, to the poor in Latin America and the Caribbean."],
+  ["Cross International Catholic Outreach", "Shelter", "Chelsey Simmons", "561-392-921", "2700 N. Military TrailSuite 240" , "Boca Raton", "FL", "33427", "org2@example.com", "1234", "Cross International (CI) is a Christian relief and development organization based in South Florida, United States, that provides food, shelter, water, education, medical care and emergency aid to the poor in over 36 developing countries across the globe."],
+  ["Family Central", "Shelter", "Sharlene O'Donnell", "954-720-1000", "840 S.W. 81st Ave.", "North Lauderdale", "FL", "33068", "org3@example.com", "1234", "Family Central (FC) is the epicenter for comprehensive family strengthening, early learning and training in South Florida.  FC continues to transform lives  providing quality family shelter  services so that every child and family can succeed."],
+  ["Early Learning Coalition of Miami-Dade/Monroe Inc.", "Food Pantry","Mike Westin", "305-646-7220", "2555 Ponce de Leon Blvd. 5th floor", "Coral Gables", "FL", "33134", "org4@example.com", "1234", "The Early Learning Coalition of Miami-Dade/Monroe is a nonprofit organization dedicated to ensuring early care and education for children in Miami-Dade and Monroe counties. Through a variety of affordable and innovative early education and voluntary pre-kindergarten programs, the Coalition serves more than 50,000 children ages birth to 12 years old and their families."],
+  ["Our Kids of Miami-Dade/Monroe", "Soup Kitchen", "Jose Hernandez", "305-455-6000", "401 N.W. Second Ave. 10th floor", "Miami", "FL", "33128", "org5@example.com",  "1234", "Our Kids of Miami-Dade/Monroe (OFM) is a non-profit organisation that provides free meal for underprivileged children in the Miami-Dade/Monroe area. The goal of OFM is to provide institutional reforms that improve children's access to nutritional meals"]
 ]
-organizations = orgs_list.map do |org_name , org_type , contact_name , contact_number , street_address, city , state , zip_code , email , password|
+organizations = orgs_list.map do |org_name , org_type , contact_name , contact_number , street_address, city , state , zip_code , email , password, description|
 
-  Organization.create(org_name: org_name, org_type: org_type, contact_name: contact_name, contact_number: contact_number, street_address: street_address, city: city, state: state, zip_code: zip_code, email: email, password: password)
+  Organization.create(org_name: org_name, org_type: org_type, contact_name: contact_name, contact_number: contact_number, street_address: street_address, city: city, state: state, zip_code: zip_code, email: email, password: password, description: description)
 end
 p Organization.all
 
