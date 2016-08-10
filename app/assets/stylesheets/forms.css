@@ -120,11 +120,8 @@ div.field.field-dateTime select {
   border-radius: 4px;
 }
 
-
-
-
-
-/*BOOTSTRAP CLASSES*/
+/*****Eventually fix to be able to use the CDN instead******/
+/**************************BOOTSTRAP CLASSES****************/
 .form-control {
   display: block;
   width: 100%;
