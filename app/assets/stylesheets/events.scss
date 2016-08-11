@@ -96,18 +96,19 @@ div#events-container {
 
 div.singleEventContainer {
   width: 33%;
-  height: 15rem;
+  height: 16rem;
   margin-top: 1rem;
-  border: 1px solid gray;
+  // border: 1px solid gray;
 
 }
 
 div.eventImageInfo {
   width: 96%;
-  height: 13rem;
+  height: 14rem;
   margin: 0 auto;
   position: relative;
   color: white;
+  // background-color: black;
 }
 
 div.links {
@@ -118,6 +119,7 @@ div.links {
 div.eventImageInfo img {
   width: 100%;
   height: 100%;
+  // opacity: 0.5;
 }
 
 div.specificInfo {
@@ -128,8 +130,13 @@ div.specificInfo {
   font-size: 18px;
   font-weight: bold;
   color: inherit;
+  // text-shadow: 5px 5px 10px black;
+  background-color: rgba(0,0,0,0.6);
+  // opacity: 0.5;
+
 }
 
 .eventImageInfo:hover {
-  color: rgb(0, 123,200);
+  // color: rgb(0, 123,200);
+  color: #00EEEE;
 }

@@ -40,11 +40,13 @@
         </div>
       <% end %>
 
-      <div class="links">
-        <%= link_to 'Show', event %>
-        <%= link_to 'Edit', edit_event_path(event) %>
-        <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
+      <% if current_organization && !@events.empty? && current_organization == @events.first.organization %>
+        <div class="links">
+          <%= link_to 'Show', event %>
+          <%= link_to 'Edit', edit_event_path(event) %>
+          <%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
 
     </div>
   <% end %>
