@@ -20,11 +20,19 @@ class EventsController < ApplicationController
       @events = current_organization.events.all
     end
 
-    if params[:format] == "calendar"
-      render "index"
-    else
-      render "index_list"
+    respond_to do |format|
+      format.html do
+        if params[:f] == "calendar"
+          render "index"
+        else
+          render "index_list"
+        end
+      end
+      format.json do
+        render "index"
+      end
     end
+
   end
 
   # GET /events/1
