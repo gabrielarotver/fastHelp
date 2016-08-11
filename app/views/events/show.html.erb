@@ -37,16 +37,11 @@
   </div>
 </div>
 
-<h3>Nearby Events</h3>
-<ul>
-  <% if !@event.nearbys(30).nil? %>
-    <% for event in @event.nearbys(30) %>
-      <li><%= link_to event.address, event %> (<%= event.distance.round(2) %>) miles </li>
-    <% end %>
-  <% end %>
-</ul>
-
 <% if current_organization && @event.organization == current_organization %>
-  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <div class="actions">
+    <%= submit_tag "Log In" %>
+    <%= link_to 'Edit', edit_event_path(@event) %>
+  </div>
+
 <% end %>
 <a href="<%= events_path %>"><img src="/assets/goBack.png" alt="Go Back" style="height: 3rem;"/></img></a>

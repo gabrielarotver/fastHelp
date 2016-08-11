@@ -27,8 +27,8 @@
  <% end %>
 
 <% if current_organization && !@events.empty? && current_organization == @events.first.organization %>
-  <div class="linkNewEvent">
-    <%= link_to 'New Event', new_event_path %>
+  <div class="editBtn">
+    <%= button_to 'New Event', new_event_path, :method => :get %>
   </div>
 <% end %>
 

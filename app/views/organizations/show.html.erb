@@ -48,5 +48,10 @@
 </div>
 
 
-<%= link_to 'Edit', edit_organization_path(@organization) %> |
-<%= link_to 'Back', organizations_path %>
+  <div class="editBtn">
+    <%= button_to 'All Organizations', organizations_path, :method => :get %>
+    <% if current_organization && (current_organization.org_name == @organization.org_name)%>
+      <%= button_to 'Edit', edit_organization_path(@organization), :method => :get %>
+      <%= button_to 'Delete Org', @organization, :method => :delete,  data: { confirm: "Are you sure? This will delete your organization's profile and your events!"}%>
+    <% end %>
+  </div>

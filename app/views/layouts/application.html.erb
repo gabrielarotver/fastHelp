@@ -8,7 +8,7 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=<%= "#{ENV['SECRET_KEY']}" %>"></script>
-        
+
         <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
         <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script>
         <!-- only if you need custom infoboxes -->
@@ -23,11 +23,13 @@
         <nav id="mainNav">
             <ul id="navigation">
                 <li>
-                    <a href="/"><img src="/assets/logo2.png" alt="Logo" style="width: 90px; height:60px;"/></li>
-                </a>
+                    <a href="/"><img src="/assets/logo2.png" alt="Logo" style="width: 90px; height:60px;"/></a>
+                </li>
+
                 <li id="fastHelp">
-                    <a href="/">FastHelp</li>
-                </a>
+                    <a href="/">FastHelp</a>
+                </li>
+
                 <li><%= link_to "HOME", root_path %></li>
                 <div class="dropdown">
                     <button class="dropbtn">ABOUT</button>
