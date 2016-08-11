@@ -6,7 +6,7 @@
   <div id="map-container">
     <div id="map-canvas"></div>
   </div>
-  
+
   <div id="event-details">
 
     <div class="detail">
@@ -49,4 +49,4 @@
 <% if current_organization && @event.organization == current_organization %>
   <%= link_to 'Edit', edit_event_path(@event) %> |
 <% end %>
-<%= link_to 'Back', events_path %>
+<a href="<%= events_path %>"><img src="/assets/goBack.png" alt="Go Back" style="height: 3rem;"/></img></a>

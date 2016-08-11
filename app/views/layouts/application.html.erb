@@ -22,7 +22,13 @@
         <li><a href="/"><img src="/assets/logo2.png" alt="Logo"style="width: 90px; height:60px;"/></li></a>
         <li id="fastHelp"><a href="/">FastHelp</li></a>
         <li><%= link_to "HOME", root_path %></li>
-        <li><a href="#">ABOUT</a></li>
+        <div class="dropdown">
+          <button class="dropbtn">ABOUT</button>
+          <div class="dropdown-content">
+            <%= link_to "FastHelp", root_path %>
+            <%= link_to "Developers", root_path %>
+          </div>
+        </div>
         <div class="dropdown">
           <button class="dropbtn">EVENTS</button>
           <div class="dropdown-content">
@@ -31,15 +37,14 @@
           </div>
         </div>
         <li> <a href="#">CONTACT</a></li>
-        <% if current_organization %>
-          <li>
-          <%= link_to "ORGANIZATION PAGE", organization_path(current_organization) %>
-          <%= link_to "LOG OUT", logout_path %>
-          </li>
-        <% else %>
-          <div class="dropdown">
-            <button class="dropbtn">ORGANIZATION</button>
-            <div class="dropdown-content">
+        <div class="dropdown">
+          <button class="dropbtn">ORGANIZATION</button>
+        <div class="dropdown-content">
+          <%= link_to "All Organizations", organizations_path %>
+          <% if current_organization %>
+              <%= link_to "My Organization", current_organization %>
+              <%= link_to "Log Out", logout_path %>
+            <% else %>
               <%= link_to "Sign Up", signup_path %>
               <%= link_to "Login", login_path %>
             </div>
