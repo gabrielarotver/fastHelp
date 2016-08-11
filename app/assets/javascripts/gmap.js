@@ -13,7 +13,7 @@ $(document).on('turbolinks:load', function(){
         // work with googlemaps APIs
         handler = Gmaps.build('Google');
         var centerOnMarker = organizations[0];
-
+        console.log(centerOnMarker);
         var url = window.location.pathname;
         var zoomInValue;
 
@@ -27,6 +27,7 @@ $(document).on('turbolinks:load', function(){
           zoomInValue = 20;
           id = parseInt(url.substring(url.lastIndexOf('/') + 1));
           centerOnMarker = url.match("/events/") ? events.find(findObjById) : organizations.find(findObjById);
+          console.log(centerOnMarker);
         }
 
         var mapOptions = {
@@ -40,6 +41,12 @@ $(document).on('turbolinks:load', function(){
           },
           internal: {id: 'map-canvas'}
         };
+
+        if(centerOnMarker.latitude === undefined || centerOnMarker.longitude ===undefined) {
+
+          centerOnMarker.latitude = 37.0902;
+          centerOnMarker.longitude = 95.7129;
+        }
 
         handler.buildMap(mapOptions, function(){
           handler.map.centerOn({lat: centerOnMarker.latitude, lng: centerOnMarker.longitude});
