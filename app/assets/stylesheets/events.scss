@@ -88,7 +88,7 @@ div.detail span {
 // ***********************EVENTS LIST***********************
 div#events-container {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-around;
   flex-wrap: wrap;
   width: 90%;
   margin: 1rem auto;
@@ -98,8 +98,6 @@ div.singleEventContainer {
   width: 33%;
   height: 16rem;
   margin-top: 1rem;
-  // border: 1px solid gray;
-
 }
 
 div.eventImageInfo {

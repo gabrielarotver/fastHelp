@@ -1,16 +1,27 @@
-
-
-<div id="all-events">
-  <!-- search bar only visible to users, not organizations with own events -->
-  <% if current_organization.nil? %>
-    <%= form_tag events_path, :method => :get do %>
-      <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search Near: ", :name => nil %>
-      </p>
-    <% end %>
+<div class="title">
+  <% if current_organization && ((!@events.empty? && current_organization == @events.first.organization) ||  @events.empty?)%>
+    <h1><%= current_organization.org_name %>'s Events</h1>
+  <% else %>
+    <h1>Events Directory</h1>
   <% end %>
 </div>
+
+
+
+
+<% if current_organization.nil? %>
+  <div id="search-near-me">
+    <!-- search bar only visible to users, not organizations with own events -->
+
+    <%= form_tag events_path, :method => :get do %>
+      <div class="searchBox">
+        <%= text_field_tag :search, params[:search], placeholder: 'Enter Zip Code, City, or Event Name', class: "form-control" %>
+      </div>
+        <%= submit_tag "Search", :name => nil %>
+    <% end %>
+  </div>
+<% end %>
+
 
 <% if current_organization && !@events.empty? && current_organization == @events.first.organization %>
   <div class="linkNewEvent">

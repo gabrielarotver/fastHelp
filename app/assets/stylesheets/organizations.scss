@@ -59,6 +59,14 @@ div#search-near-me form {
   display: flex;
 }
 
+div#search-near-me input {
+  padding: 0 1rem;
+}
+
+div#search-near-me div.searchBox {
+  min-width: 20rem;
+}
+
 div.org {
   display: flex;
   width: 100%;
