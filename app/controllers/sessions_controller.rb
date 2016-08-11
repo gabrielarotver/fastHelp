@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:organization_id] = organization.id
       redirect_to root_url, notice: 'Logged in!'
     else
-      render :new
+      redirect_to login_path, flash: {alert: "Invalid Login, Try again"}
     end
   end
 

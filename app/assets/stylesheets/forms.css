@@ -1,6 +1,8 @@
 /*********************LOGIN FORM**************/
 .alert {
-  margin-top: 3rem;
+  width: 50%;
+  margin: 3rem auto;
+  line-height: 100%;
   color: red;
   font-size: 2rem;
   text-align: center;

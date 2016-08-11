@@ -8,7 +8,16 @@ class OrganizationsController < ApplicationController
   def index
     if params[:search].present?
       # search radius and order by distance
-      @organizations = Organization.near(params[:search], 10, :order => 'distance')
+      @organizations = Organization.near(params[:search], 10, :order => 'distance') + Organization.where(org_name: params[:search])
+
+      puts "*" * 50
+      # p Organization.where(org_name: params[:search]).any?
+      p @organizations.empty?
+      puts "*" * 50
+      if @organizations.empty?
+        flash[:alert] = "Your search for #{params[:search]} did not return any results. Please try again."
+        @organizations = Organization.all
+      end
     else
       @organizations = Organization.all
     end
