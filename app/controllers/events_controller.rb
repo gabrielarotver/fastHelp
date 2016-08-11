@@ -7,10 +7,12 @@ class EventsController < ApplicationController
   def index
     if current_organization.nil?
       if params[:search].present?
-        @events = Event.near(params[:search], 50, :order => 'distance') + Event.where(event_name: params[:search])
+        @events = Event.near(params[:search], 50, :order => 'distance') + Event.where("event_name ILIKE ?", "%#{params[:search]}%")
+
+        # ILIKE is a way for insensitive case match
 
         if @events.empty?
-          flash[:alert] = "Your search for #{params[:search]} did not return any results. Please try again."
+          flash.now[:alert] = "Your search for #{params[:search]} did not return any results. Please try again."
           @events = Event.all
         end
       else
