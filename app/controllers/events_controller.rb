@@ -7,7 +7,12 @@ class EventsController < ApplicationController
   def index
     if current_organization.nil?
       if params[:search].present?
-        @events = Event.near(params[:search], 50, :order => 'distance')
+        @events = Event.near(params[:search], 50, :order => 'distance') + Event.where(event_name: params[:search])
+
+        if @events.empty?
+          flash[:alert] = "Your search for #{params[:search]} did not return any results. Please try again."
+          @events = Event.all
+        end
       else
         @events = Event.all
       end
@@ -15,10 +20,10 @@ class EventsController < ApplicationController
       @events = current_organization.events.all
     end
 
-    if params[:format] == "list"
-      render "index_list"
-    else
+    if params[:format] == "calendar"
       render "index"
+    else
+      render "index_list"
     end
   end
 
