@@ -5,7 +5,8 @@
   font-style: italic;
   font-weight: bold;
   font-size: 1rem;
-  text-shadow: -1px 0 rgb(0, 123,200), 0 1px rgb(0, 123,200), 1px 0 rgb(0, 123,200), 0 -1px rgb(0, 123,200);
+  // text-shadow: -1px 0 rgb(0, 123,200), 0 1px rgb(0, 123,200), 1px 0 rgb(0, 123,200), 0 -1px rgb(0, 123,200);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   // text-shadow: 2px 2px 8px rgb(0, 123,200);
 }
 
@@ -23,10 +24,11 @@ div.headerWithImage img{
 .center {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 15%;
     width: 100%;
     text-align: center;
     color: white;
+    // background-color: rgba(0,0,0,0.3);
 }
 
 .center h1 {
@@ -34,8 +36,10 @@ div.headerWithImage img{
   font-family: 'Roboto Slab', serif;
   font-weight: bolder;
   // text-shadow: -1px 0 rgb(0, 123,200), 0 1px rgb(0, 123,200), 1px 0 rgb(0, 123,200), 0 -1px rgb(0, 123,200);
-  text-shadow: 2px 2px 8px rgb(0, 123,200);
+  // text-shadow: 2px 2px 8px rgb(0, 123,200);
+  text-shadow: 2px 2px 8px black;
   font-size: 4rem;
+
 }
 
 // ***************************ORG INDEX********************

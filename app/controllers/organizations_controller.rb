@@ -98,7 +98,7 @@ class OrganizationsController < ApplicationController
         redirect_to login_url, alert: "Not authorized! Please log in."
       else
         if @organization != current_organization
-          redirect_to root_path, alert: "Not authorized! Only #{@organization} has access to edit information on this page!"
+          redirect_to login_url, alert: "Not authorized! Log In as #{@organization} to edit the organization's information!"
         end
       end
     end
