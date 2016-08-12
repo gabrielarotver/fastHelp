@@ -17,7 +17,7 @@
       <div class="searchBox">
         <%= text_field_tag :search, params[:search], placeholder: 'Enter Zip Code, City, or Event Name', class: "form-control" %>
       </div>
-        <%= submit_tag "Search", :name => nil %>
+        <%= submit_tag "Search", :name => nil, class: "srchBtn" %>
     <% end %>
   </div>
 <% end %>
