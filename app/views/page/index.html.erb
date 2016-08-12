@@ -1,5 +1,5 @@
 <div id="directions" class="title">
-  <h1>Need Help?</h1>
+  <h1>NEED HELP?</h1>
   <p>
     Find organizations and events near your area by entering your city or zip code in the map's search bar!
   </p>
@@ -8,7 +8,7 @@
 <div id="map-container">
   <div id="map-canvas"></div>
 
-  <div id="geocoding_fields">
+  <div id="geocoding_fields" style="none">
     <%= text_field_tag :search, params[:search], placeholder: "Enter a place", :id => 'search_box_geocoding', class: 'search_box' %>
     <%= button_tag "Search", id: "submit_button_geocoding", data: { disable_with: "Please wait..." }, class: "submit_button" %>
   </div>
