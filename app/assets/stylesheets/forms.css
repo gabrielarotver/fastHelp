@@ -51,16 +51,32 @@ form#new_organization, form.edit_organization, form#new_event, .edit_event {
   display: flex;
   flex-wrap: wrap;
   font-family: 'Source Sans Pro', sans-serif;
+  /*color: rgb(0, 123,200);*/
+  color: #333333;
+  /*font-weight: bold;*/
 }
 
+div.stateZip {
+  display: flex;
+}
+
+div.stateZip div.field {
+  width: 30%;
+}
+
+div.stateZip div.field:last-child {
+  margin-left: 2rem;
+}
 .row1, .row3 {
   width: 100%;
   margin: 0;
+  background-color: #f0f0f0;
 }
 
 .row2 {
   width: 50%;
   margin: 0;
+  background-color: #f0f0f0;
 }
 
 #submit-btn {
@@ -82,7 +98,7 @@ textarea#organization_description{
   display: none;    /* for jQuery css method */
 }
 
-select#organization_org_type, input#org_type_text {
+select#organization_org_type, input#org_type_text, select#organization_state, select#event_state {
 width: 100%;
 padding: 6px 12px;
 font-size: 14px;
@@ -104,9 +120,12 @@ fieldset.event-row1 {
 }
 .row1 label{
   display:inline;
+
 }
 
-
+label {
+  font-size: 1.1rem;
+}
 textarea#event_description{
   height: 16em;
 }

@@ -48,15 +48,19 @@
     <%= f.text_field :city, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :state %>
-    <%= f.select :state, options_for_select(us_states, "Florida"), class: "form-control" %>
+  <div class="stateZip">
+
+    <div class="field">
+      <%= f.label :zip_code %>
+      <%= f.text_field :zip_code, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :state %>
+      <%= f.select :state, options_for_select(us_states, "FL")%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :zip_code %>
-    <%= f.text_field :zip_code, class: "form-control" %>
-  </div>
 </fieldset>
 
 <fieldset class="row2">

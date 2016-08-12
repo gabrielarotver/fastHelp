@@ -10,7 +10,7 @@ div#calendar {
 
 .title {
   text-align: center;
-  margin: 4rem auto 4rem auto;
+  margin: 4rem auto 2rem auto;
   // font-family: 'Roboto';
   font-family: cursive;
   font-size: 2rem;
@@ -107,6 +107,9 @@ div.eventImageInfo {
   margin: 0 auto;
   position: relative;
   color: white;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(145,135,145,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(145,135,145,1);
+  box-shadow: 10px 10px 5px 0px rgba(145,135,145,1);
   // background-color: black;
 }
 

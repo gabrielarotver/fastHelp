@@ -23,7 +23,7 @@
   }
   body {
     margin: 0;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: arial, "Helvetica Neue",Helvetica,Arial,sans-serif;
   }
 
   /*******************************************************************
@@ -70,8 +70,8 @@
 /*EVENTS DROP DOWN MENU*/
 /*Created a dropdown menu for “Events” that allows the user to choose an option from a list*/
 .dropbtn {
-    background-color: black;
-    color: white;
+    background-color: inherit;
+    color: inherit;
     padding-left: 16px;
     border: none;
     cursor: pointer;
@@ -93,7 +93,7 @@
 
 .dropdown-content a {
   font-size: 0.9rem;
-    color: black;
+    color: inherit;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
