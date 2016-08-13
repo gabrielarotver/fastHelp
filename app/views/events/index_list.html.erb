@@ -33,7 +33,7 @@
     </div>
   <% end %>
     <div class="editBtn">
-      <%= button_to 'New Event', new_event_path, :method => :get %>
+      <%= button_to 'Create New Event', new_event_path, :method => :get %>
     </div>
 <% end %>
 
@@ -54,9 +54,7 @@
 
       <% if current_organization && !@events.empty? && current_organization == @events.first.organization %>
         <div class="links">
-          <%= link_to 'Show', event %>
-          <%= link_to 'Edit', edit_event_path(event) %>
-          <%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure you want to delete this event?' } %>
         </div>
       <% end %>
 
