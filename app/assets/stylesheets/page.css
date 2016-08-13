@@ -63,11 +63,14 @@ MAIN PAGE LAYOUT
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background-color: #65AFFF;
+    background-color: #00acee;
     border-color: #ccc;
     width: 50%;
     padding: 6px 12px;
-    border: 1px solid lightgrey;
     border-radius: 4px;
     margin: auto auto 1rem auto;
+}
+a.panel-btn:hover{
+  box-shadow: 0 4px 4px rgba(0,0,0,.50);
+  border: 1px solid #006494;
 }

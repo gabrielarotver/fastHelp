@@ -116,10 +116,14 @@ rgba(0,0,0,1);
     display: block;
 }
 
-
 /************FOOTER***************/
-footer {
-  background-color:
-rgba(0,0,0,1);
-  /*min-height: 2rem;*/
 }
+
+/*.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  height: 3rem;
+
+}*/
