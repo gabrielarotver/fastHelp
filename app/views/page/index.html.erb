@@ -9,7 +9,7 @@
   <div id="map-canvas"></div>
 
   <div id="geocoding_fields" style="none">
-    <%= text_field_tag :search, params[:search], placeholder: "Enter a place", :id => 'search_box_geocoding', class: 'search_box' %>
+    <%= text_field_tag :search, params[:search], placeholder: "Enter a location", :id => 'search_box_geocoding', class: 'search_box' %>
     <%= button_tag "Search", id: "submit_button_geocoding", data: { disable_with: "Please wait..." }, class: "submit_button" %>
   </div>
 </div>
@@ -43,7 +43,7 @@
       <h3>Need Assistance?</h3>
     </div>
     <p>
-      FastHelp believes that help should be within hand's reach for those who truly need it. Find local events and organizations by putting in a zip code or city on the map's search bar (or on the organizations &amp; events pages)! You will find local shelters, food pantries, soup kitchens, and events hosted to provide assistance and relief to the community!
+      FastHelp believes that help should be within hand's reach for those who truly need it. Use FastHelp to find local shelters, food pantries, soup kitchens, and events hosted to provide assistance and relief to the community!
     </p>
     <a href="#" class="panel-btn">Learn More</a>
 

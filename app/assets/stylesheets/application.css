@@ -24,6 +24,7 @@
   body {
    margin-top: 0;
    margin-left: 0;
+   height: 100%;
    font-family: 'Cantarell', sans-serif;
   }
 
@@ -31,11 +32,13 @@
   NAV BAR
   *******************************************************************/
   #mainNav {
-    background-color: black;
+    background-color:
+rgba(0,0,0,1);
     color: white;
     font-weight: bold;
     padding: 0.5rem 0;
     margin:0;
+    border-top: 3px solid #00acee;
   }
   #navigation {
     margin: 0;
@@ -53,7 +56,7 @@
   }
 
   #mainNav a:hover {
-    color: rgb(15, 165, 239);
+    color: #00acee;
   }
 
   #navigation li {
@@ -78,6 +81,10 @@
     cursor: pointer;
 }
 
+.dropbtn:hover {
+  color: #00acee;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -87,9 +94,10 @@
     display: none;
     z-index: 1;
     position: absolute;
-    background-color: black;
+    background-color:
+rgba(0,0,0,1);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(15, 165, 239);
+    /*box-shadow: 0px 8px 16px 0px rgb(15, 165, 239);*/
 }
 
 .dropdown-content a {
@@ -101,9 +109,17 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1
+  /*background-color: #f1f1f1;*/
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+
+/************FOOTER***************/
+footer {
+  background-color:
+rgba(0,0,0,1);
+  /*min-height: 2rem;*/
 }
