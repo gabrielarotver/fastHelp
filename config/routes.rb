@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'signup', to: 'organizations#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
-
+  get 'about', to: 'page#about'
   get 'page/index'
   root 'page#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
