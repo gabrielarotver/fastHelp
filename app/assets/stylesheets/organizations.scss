@@ -150,7 +150,7 @@ div.orgDetails h2 {
 div.editBtn {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -169,6 +169,16 @@ div.editBtn input:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-div.orgDetails {
+div.delBtn {
+  display: flex;
+  justify-content: flex-end;
+}
 
+div.delBtn input {
+  background-color: red;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

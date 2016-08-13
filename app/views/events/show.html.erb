@@ -37,18 +37,15 @@
   </div>
 </div>
 
-<% if current_organization && @event.organization == current_organization %>
-  <div class="actions">
-    <%= submit_tag "Log In" %>
-    <%= link_to 'Edit', edit_event_path(@event) %>
-  </div>
-
-<% end %>
-
 <div class="editBtn">
   <%= button_to 'All Events', events_path, :method => :get %>
   <% if current_organization && (current_organization.org_name == @event.organization.org_name)%>
     <%= button_to 'Edit', edit_event_path(@event), :method => :get %>
-    <%= button_to 'Delete Event', @event, :method => :delete,  data: { confirm: "Are you sure? This will delete your event!"}%>
   <% end %>
 </div>
+
+<% if current_organization && (current_organization.org_name == @event.organization.org_name)%>
+  <div class="delBtn">
+    <%= button_to 'Delete Event', @event, :method => :delete,  data: { confirm: "Are you sure? This will delete your event!"}%>
+  </div>
+<% end %>
