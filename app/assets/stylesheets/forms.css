@@ -17,6 +17,7 @@ input#email, input#password{
   font-family: 'Cantarell', sans-serif;
   width: 40%;
   margin: 0 auto;
+
 }
 .login {
   width: 100%;
@@ -70,13 +71,14 @@ div.stateZip div.field:last-child {
 .row1, .row3 {
   width: 100%;
   margin: 0;
-  background-color: #f0f0f0;
+  /*background-color: #f0f0f0;*/
+  background-color: #d9d9d9;
 }
 
 .row2 {
   width: 50%;
   margin: 0;
-  background-color: #f0f0f0;
+  background-color: #d9d9d9;
 }
 
 #submit-btn {

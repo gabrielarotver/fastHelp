@@ -28,23 +28,22 @@ div#calendar {
 
 // events displayed in the calendar
 div.fc-content {
-  color: black;
-  background-color: #37FDFC;
+  color: white;
+  background-color: #006494;
   font-size: 1rem;
   height: 1.3rem;
 }
 
-div.fc-content:hover {
-  background-color: #eadbe5;
-}
 
 .tooltipevent {
+  color: white;
   padding: 1rem;
-  background: #eadbe5;
+  background: #363732;
   position: absolute;
   z-index: 10001;
   // font-family: serif;
   font-size: 1rem;
+  border-radius: 4px;
 }
 
 // ***********************INDIVIDUAL EVENT DISPLAY***********************
@@ -95,10 +94,12 @@ div.detail span {
 
 .srchBtn {
   color: #fff;
-  background-color: #6959CD;
+  background-color: #00acee;
+  border-color: #ccc;
   border: none;
   padding: 0.5rem;
 }
+
 
 div#events-container {
   display: flex;

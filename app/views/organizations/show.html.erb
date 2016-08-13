@@ -64,14 +64,10 @@
     <% if !current_organization %>
       <%= button_to 'All Organizations', organizations_path, :method => :get %>
     <% elsif current_organization && (current_organization.org_name == @organization.org_name)%>
-      <%= button_to 'New Event', new_event_path, :method => :get %>
+      <%= button_to 'My Events', events_path, :method => :get %>
       <%= button_to 'Edit Org Info', edit_organization_path(@organization), :method => :get %>
-
+      <div class="delBtn">
+        <%= button_to 'Delete Org', @organization, :method => :delete,  data: { confirm: "Are you sure? This will delete your organization's profile and your events!"}%>
+      </div>
     <% end %>
   </div>
-
-<% if current_organization && (current_organization.org_name == @organization.org_name)%>
-  <div class="delBtn">
-    <%= button_to 'Delete Org', @organization, :method => :delete,  data: { confirm: "Are you sure? This will delete your organization's profile and your events!"}%>
-  </div>
-<% end %>
