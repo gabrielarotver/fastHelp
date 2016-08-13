@@ -16,8 +16,7 @@ div#calendar {
 .title {
   text-align: center;
   margin: 4rem auto 2rem auto;
-  // font-family: 'Roboto';
-  font-family: Georgia, serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
 
 }
@@ -44,7 +43,7 @@ div.fc-content:hover {
   background: #eadbe5;
   position: absolute;
   z-index: 10001;
-  font-family: serif;
+  // font-family: serif;
   font-size: 1rem;
 }
 
@@ -58,7 +57,7 @@ div#event-container {
 
 div#event-details {
   width: 50%;
-  font-family: 'Yrsa', serif;
+  // font-family: 'Yrsa', serif;
   font-size: 1.2rem;
   padding: 0 2rem;
 }
@@ -121,10 +120,7 @@ div.eventImageInfo {
   margin: 0 auto;
   position: relative;
   color: white;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(145,135,145,1);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(145,135,145,1);
-  box-shadow: 10px 10px 5px 0px rgba(145,135,145,1);
-  // background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 div.links {

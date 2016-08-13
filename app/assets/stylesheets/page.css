@@ -3,16 +3,14 @@ MAIN PAGE LAYOUT
 *******************************************************************/
 
 #directions h1 {
-  /*font-family: 'Lora', serif;*/
   color: black;
-  /*font-size: 3rem;*/
   font-weight: normal;
   margin: 0.2rem;
   text-align: center;
 }
 
 #directions p {
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: inherit;*/
   font-size: 1.3rem;
   line-height: 2rem;
 }
@@ -47,10 +45,7 @@ MAIN PAGE LAYOUT
   border-top-right-radius: 3px;
 }
 .panel h3 {
-  background: #B993D6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #B993D6 , #8CA6DB); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #B993D6 , #8CA6DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #cccccc;
   border-radius: 10px 10px 0 0;
   font-size: 1.2rem;
   padding: 0.7rem;
@@ -62,7 +57,7 @@ MAIN PAGE LAYOUT
 }
 
 .panel-btn {
-  font-size: 1rem;
+    font-size: 1rem;
     text-decoration: none;
     color: #333;
     background-color: #fff;
@@ -71,5 +66,6 @@ MAIN PAGE LAYOUT
     padding: 6px 12px;
     border: 1px solid lightgrey;
     border-radius: 4px;
+    margin-top: auto;
     margin-bottom: 1rem;
 }
