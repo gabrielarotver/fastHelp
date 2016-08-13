@@ -14,7 +14,7 @@ input#email, input#password{
   border-radius: 4px;
 }
 .loginFormContainer{
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Cantarell', sans-serif;
   width: 40%;
   margin: 0 auto;
 }
@@ -50,7 +50,7 @@ form#new_organization, form.edit_organization, form#new_event, .edit_event {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Cantarell', sans-serif;
   /*color: rgb(0, 123,200);*/
   color: #333333;
   /*font-weight: bold;*/
