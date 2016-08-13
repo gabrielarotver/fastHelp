@@ -14,7 +14,7 @@ class Organization < ApplicationRecord
   validates :zip_code, presence: true
   validates :email, presence: true, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}
 
-  has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#" }, :default_url => '/assets/banner.jpg'
+  has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#" }, :default_url => '/assets/bgblue.jpg'
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 

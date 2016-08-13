@@ -28,7 +28,6 @@
           <% if !organization.description.nil? %>
             <%= organization.description.truncate(300) %>
           <% end %>
-          <%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       </div>
     <% end %>

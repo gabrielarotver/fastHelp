@@ -51,13 +51,13 @@
   <div class="stateZip">
 
     <div class="field">
-      <%= f.label :zip_code %>
-      <%= f.text_field :zip_code, class: "form-control" %>
+      <%= f.label :state %>
+      <%= f.select :state, options_for_select(us_states, "FL")%>
     </div>
 
     <div class="field">
-      <%= f.label :state %>
-      <%= f.select :state, options_for_select(us_states, "FL")%>
+      <%= f.label :zip_code %>
+      <%= f.text_field :zip_code, class: "form-control" %>
     </div>
   </div>
 

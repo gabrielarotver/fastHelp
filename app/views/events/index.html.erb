@@ -1,16 +1,18 @@
-<div class="title">
+<div class="calendarBg">
+  <div class="title">
+    <% if current_organization %>
+      <h1>Your Events</h1>
+    <% else %>
+      <h1>Events</h1>
+    <% end %>
+  </div>
+
+
+  <div id="calendar"></div>
+
+
+
   <% if current_organization %>
-    <h1>Your Events</h1>
-  <% else %>
-    <h1>Events</h1>
+    <%= link_to 'New Event', new_event_path %>
   <% end %>
 </div>
-
-
-<div id="calendar"></div>
-
-
-
-<% if current_organization %>
-  <%= link_to 'New Event', new_event_path %>
-<% end %>

@@ -13,14 +13,14 @@ MAIN PAGE LAYOUT
 
 #directions p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 2rem;
 }
 
 #directions {
   text-align: center;
   width: 50%;
-  margin: 4rem auto;
+  margin: 4rem auto 3rem auto;
 }
 
 #panel-container {
@@ -38,23 +38,27 @@ MAIN PAGE LAYOUT
   width: 30%;
 }
 
+
 .panel div.panel-title {
   background-color: #d9d9d9;
   border-color: #ddd;
-  line-height: 3rem;
-  margin-top: auto;
+  margin-top: 0;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
 .panel h3 {
-  background-color:#d9d9d9;
-  border-radius: 10px;
-  border-bottom: 1px solid transparent;
-  font-size: 1rem;
-  margin-top: 5px;
+  background: #B993D6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #B993D6 , #8CA6DB); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #B993D6 , #8CA6DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 10px 10px 0 0;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  font-family: arial;
   }
 .panel p {
   text-align: left;
+  padding: 1rem;
 }
 
 .panel-btn {

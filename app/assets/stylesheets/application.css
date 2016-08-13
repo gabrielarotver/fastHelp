@@ -23,6 +23,22 @@
   }
   body {
     margin: 0;
+    /*background-color: #b2cecf;*/
+    /*background-color: #BBFFFF;*/
+
+    background: #EFEFBB; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, #EFEFBB , #D4D3DD); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #EFEFBB , #D4D3DD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+
+
+
+
+
     font-family: arial, "Helvetica Neue",Helvetica,Arial,sans-serif;
   }
 

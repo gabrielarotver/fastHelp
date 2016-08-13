@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // ***********************CALENDAR DISPLAY***********************
+
+div.calendarBg {
+  background-color: white;
+}
+
 div#calendar {
   width: 80%;
   margin: 1rem auto;
@@ -12,7 +17,7 @@ div#calendar {
   text-align: center;
   margin: 4rem auto 2rem auto;
   // font-family: 'Roboto';
-  font-family: cursive;
+  font-family: Georgia, serif;
   font-size: 2rem;
 
 }
@@ -25,8 +30,9 @@ div#calendar {
 // events displayed in the calendar
 div.fc-content {
   color: black;
-  font-size: 0.8rem;
-  height: 1rem;
+  background-color: #37FDFC;
+  font-size: 1rem;
+  height: 1.3rem;
 }
 
 div.fc-content:hover {
@@ -124,6 +130,7 @@ div.eventImageInfo {
 div.links {
   width: 96%;
   text-align: center;
+  margin-top: 1rem;
 }
 
 div.eventImageInfo img {
