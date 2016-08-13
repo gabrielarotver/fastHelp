@@ -16,6 +16,18 @@
       <b>Organization Type: </b><%= @organization.org_type %>
     </div>
 
+    <% if @organization.org_type == "Shelter" %>
+      <div class="detail">
+        <b>Availability/Occupancy Status: </b>
+        <% if @organization.availability %>
+          Available
+        <% else %>
+          Not Available
+        <% end %>
+      </div>
+
+    <% end %>
+
     <div class="detail">
       <p>
         <%= @organization.description %>

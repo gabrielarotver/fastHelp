@@ -24,6 +24,10 @@
     <%= f.label "Organization Type" %>
     <%= f.select :org_type,['Food Pantry', 'Shelter', 'Soup Kitchen', 'Other']%>
     <div id="otherField"><%= text_field_tag :org_type_text, nil, placeholder: "Enter type here" %></div>
+    <div id="otherField2">
+      <%= label_tag "Shelter Availability Status" %>
+      <%= select_tag :availability_status, "<option>Available</option><option>Not Available</option>".html_safe %>
+    </div>
   </div>
 
   <div class="field">

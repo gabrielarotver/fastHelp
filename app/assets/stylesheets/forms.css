@@ -98,7 +98,12 @@ textarea#organization_description{
   display: none;    /* for jQuery css method */
 }
 
-select#organization_org_type, input#org_type_text, select#organization_state, select#event_state {
+#otherField2 {
+  margin-top: 0.5rem;
+  display: none;    /* for jQuery css method */
+}
+
+select#organization_org_type, input#org_type_text, select#organization_state, select#event_state, select#availability_status {
 width: 100%;
 padding: 6px 12px;
 font-size: 14px;
