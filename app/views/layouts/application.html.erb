@@ -31,12 +31,6 @@
                 </li>
 
                 <li><%= link_to "HOME", root_path %></li>
-                <div class="dropdown">
-                    <button class="dropbtn">ABOUT</button>
-                    <div class="dropdown-content">
-                        <%= link_to "FastHelp", root_path %>
-                        <%= link_to "Developers", root_path %>
-                    </div>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">EVENTS</button>
@@ -45,28 +39,32 @@
                         <%= link_to "Calendar View", events_path(:f => "calendar") %>
                     </div>
                 </div>
+                <div class="dropdown">
+                    <button class="dropbtn">ORGANIZATIONS</button>
+                    <div class="dropdown-content">
+                      <%= link_to "All Organizations", organizations_path %>
+                      <% if current_organization %>
+                      <%= link_to "My Organization", current_organization %>
+                        <% end %>
+                    </div>
+                </div>
                 <li>
                     <a href="#">CONTACT</a>
                 </li>
-                <div class="dropdown">
-                    <button class="dropbtn">ORGANIZATION</button>
-                    <div class="dropdown-content">
-                        <%= link_to "All Organizations", organizations_path %>
-                        <% if current_organization %>
-                        <%= link_to "My Organization", current_organization %>
-                        <%= link_to "Log Out", logout_path %>
-                    <% else %>
-                        <%= link_to "Sign Up", signup_path %>
-                        <%= link_to "Login", login_path %>
-                    </div>
-                </div>
+                <li><%= link_to "SIGN UP", signup_path %></li>
+                <li><%= link_to "LOG IN", login_path %></li>
+                <% if current_organization %>
+                <li><%= link_to "LOGOUT", logout_path %></li>
                 <% end %>
             </ul>
         </nav>
 
         <%= yield %>
+        <div class="page-wrap">
+        </div>
 
         <footer class="site-footer">
+
         </footer>
     </body>
 </html>

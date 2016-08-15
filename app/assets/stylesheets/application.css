@@ -119,11 +119,19 @@ rgba(0,0,0,1);
 /************FOOTER***************/
 }
 
-/*.site-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  height: 3rem;
-
-}*/
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: 6rem;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer{
+  height: 8rem;
+}
+.site-footer {
+  margin-top: 6rem;
+  background: rgb(0,0,1);
+}
