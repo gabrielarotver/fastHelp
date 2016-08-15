@@ -51,20 +51,15 @@
                 <li>
                     <a href="#">CONTACT</a>
                 </li>
-                <li><%= link_to "SIGN UP", signup_path %></li>
-                <li><%= link_to "LOG IN", login_path %></li>
-                <% if current_organization %>
+                <% if !current_organization %>
+                  <li><%= link_to "SIGN UP", signup_path %></li>
+                  <li><%= link_to "LOG IN", login_path %></li>
+                <% elsif current_organization %>
                 <li><%= link_to "LOGOUT", logout_path %></li>
                 <% end %>
             </ul>
         </nav>
 
         <%= yield %>
-        <div class="page-wrap">
-        </div>
-
-        <footer class="site-footer">
-
-        </footer>
     </body>
 </html>

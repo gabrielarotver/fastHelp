@@ -115,23 +115,3 @@ rgba(0,0,0,1);
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-/************FOOTER***************/
-}
-
-.page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: 6rem;
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-.site-footer{
-  height: 8rem;
-}
-.site-footer {
-  margin-top: 6rem;
-  background: rgb(0,0,1);
-}
