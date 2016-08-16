@@ -71,6 +71,11 @@ rgba(0,0,0,1);
     font-size: 2em;
     color: white;
   }
+
+  .logoImg img {
+    width: 90px;
+    height: 60px;
+  }
 /*EVENTS DROP DOWN MENU*/
 /*Created a dropdown menu for “Events” that allows the user to choose an option from a list*/
 .dropbtn {
