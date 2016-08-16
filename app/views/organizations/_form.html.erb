@@ -1,4 +1,4 @@
-<%= form_for(organization) do |f| %>
+<%= form_for(organization, multipart: true) do |f| %>
   <% if !flash.empty? && flash[:errors]%>
     <div id="error_explanation">
       <%= flash["password"] %>
