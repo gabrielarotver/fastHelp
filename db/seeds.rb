@@ -10,10 +10,16 @@
 
 orgs_list = [
   ["Food for the Poor", "Food Pantry", "Michelle Gondalez", "954-427-222", "6401 Lyons Road", "Coconut Creek", "FL", "33073", "org1@example.com", "1234", "Food For The Poor, Inc. (FFP) is an ecumenical Christian nonprofit organization based in Coconut Creek, Florida, USA that provides food, medicine, and shelter, among other services, to the poor in Latin America and the Caribbean."],
+
   ["Cross International Catholic Outreach", "Shelter", "Chelsey Simmons", "561-392-921", "2700 N. Military TrailSuite 240" , "Boca Raton", "FL", "33427", "org2@example.com", "1234", "Cross International (CI) is a Christian relief and development organization based in South Florida, United States, that provides food, shelter, water, education, medical care and emergency aid to the poor in over 36 developing countries across the globe."],
+
   ["Family Central", "Shelter", "Sharlene O'Donnell", "954-720-1000", "840 S.W. 81st Ave.", "North Lauderdale", "FL", "33068", "org3@example.com", "1234", "Family Central (FC) is the epicenter for comprehensive family strengthening, early learning and training in South Florida.  FC continues to transform lives  providing quality family shelter  services so that every child and family can succeed."],
+
   ["Early Learning Coalition of Miami-Dade/Monroe Inc.", "Food Pantry","Mike Westin", "305-646-7220", "2555 Ponce de Leon Blvd. 5th floor", "Coral Gables", "FL", "33134", "org4@example.com", "1234", "The Early Learning Coalition of Miami-Dade/Monroe is a nonprofit organization dedicated to ensuring early care and education for children in Miami-Dade and Monroe counties. Through a variety of affordable and innovative early education and voluntary pre-kindergarten programs, the Coalition serves more than 50,000 children ages birth to 12 years old and their families."],
-  ["Our Kids of Miami-Dade/Monroe", "Soup Kitchen", "Jose Hernandez", "305-455-6000", "401 N.W. Second Ave. 10th floor", "Miami", "FL", "33128", "org5@example.com",  "1234", "Our Kids of Miami-Dade/Monroe (OFM) is a non-profit organisation that provides free meal for underprivileged children in the Miami-Dade/Monroe area. The goal of OFM is to provide institutional reforms that improve children's access to nutritional meals"]
+
+  ["Our Kids of Miami-Dade/Monroe", "Soup Kitchen", "Jose Hernandez", "305-455-6000", "401 N.W. Second Ave. 10th floor", "Miami", "FL", "33128", "org5@example.com",  "1234", "Our Kids of Miami-Dade/Monroe (OFM) is a non-profit organisation that provides free meal for underprivileged children in the Miami-Dade/Monroe area. The goal of OFM is to provide institutional reforms that improve children's access to nutritional meals"],
+
+  ["No More Tears Inc", "Shelter", "Roma Urooj", "954-324-7669", "10097 Cleary Blvd # 150", "Plantation", "FL", "33324", "org6@example.com",  "1234", "No More Tears is a 501 (C) 3 not-for-profit organization with a focus on helping immigrant women in the United States who are victims of spousal abuse. Many of these women are brought to America via arranged marriages and are scared to speak out against their oppressor due to the ramifications they will face in their home country or for the fear of being sent back. We help with these women in not only wiping away the tears, but also making sure that there are No More Tears!"]
 ]
 organizations = orgs_list.map do |org_name , org_type , contact_name , contact_number , street_address, city , state , zip_code , email , password, description|
 
@@ -30,7 +36,9 @@ events_list = [
 
   ["Coral Gables Helping Hands" , "2016-08-29", "11:00:00", "285 Aragon Avenue","Coral Gables", "FL", "33134", "Distribute clothes and swimsuits according to their age, size and children's name at Coral Gables, clothing donations are welcome." ],
 
-  ["Toys for Tots" ,  "2016-08-27", "10:00:00", "5701 Sunset Dr" , "Miami", "FL", "33128", "Sort and distribute toys to underprivileged children from ages 3-12 years old in Miami. Toys dropoffs are welcome."]
+  ["Toys for Tots" ,  "2016-08-27", "10:00:00", "5701 Sunset Dr" , "Miami", "FL", "33128", "Sort and distribute toys to underprivileged children from ages 3-12 years old in Miami. Toys dropoffs are welcome."],
+
+  ["Alex and Ani", "2016-08-30", "10:00:00", "1012 LAS OLAS BOULEVARD" , "Fort Lauderdale", "FL", "33301", "YOUR’RE INVITED…TO A CHARMED BY CHARITY SOIREE. Come sip refreshments, snack on small bites and shop with others who share your passion for giving back.15% of all proceeds* will be donated to support NO MORE TEARS"]
 ]
 events_list.zip(organizations) do |event, organization|
   event_name, date, time, street_address, city, state, zip_code, description = event
